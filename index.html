@@ -7,22 +7,94 @@
     <meta name="description" content="Мы - сервисный центр по ремонту техники, производства компании Dell.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="normalize.css">
   </head>
-  <body>
+  <body class="page-body">
     <div class="page-wrapper">
-      <header class="page-header">
-        <button type="button" class="page-header__menu-icon icon icon--burger"></button>
-        <img src="images/logo.svg" alt="Логотип CPS" width="98" height="52" class="page-header__logo">
-        <button type="button" class="page-header__request-icon icon icon--tools"></button>
-        <button type="button" class="page-header__repair-status-icon icon icon--notepad"></button>
-      </header>
-      <main>
+      <div class="header-background"></div>
+        <header class="page-header">
+          <button type="button" class="page-header__menu-icon icon icon--burger"></button>
+          <img src="images/logo.svg" alt="Логотип CPS" width="98" height="52" class="page-header__logo">
+          <ul class="page-header__communications-list communications">
+            <li class="communications__item">
+              <button type="button" class="communications__call-icon icon icon--call"></button>
+            </li>
+            <li class="communications__item">
+              <button type="button" class="communications__chat-icon icon icon--chat"></button>
+            </li>
+          </ul>
+          <ul class="page-header__profile-management profile-management">
+            <li class="profile-management__item">
+              <a href="#" class="profile-management__profile-icon icon icon--profile"></a>
+            </li>
+          </ul>
+          <ul class="page-header__service-list services">
+            <li class="services__item">
+              <button type="button" class="services__request-icon icon icon--tools"></button>
+            </li>
+            <li class="services__item">
+              <button type="button" class="services__repair-status-icon icon icon--notepad"></button>
+            </li>
+          </ul>
+        </header>
+      </div>
+      <div class="main-and-footer-background">
+        <main class="page-main">
+          <div class="title-and-nav-wrapper">
+            <h1 class="page-title">
+              Услуги и сервисы
+            </h1>
+            <nav class="page-main__nav site-nav">
+              <ul class="site-nav__site-list site-list">
+                <li class="site-list__item site-list__item--active">
+                  <a class="site-list__link link" href="#">Ремонтируемые бренды</a>
+                </li>
+                <li class="site-list__item">
+                  <a class="site-list__link link" href="#">Дополнительные услуги</a>
+                </li>
+                <li class="site-list__item">
+                  <a class="site-list__link link" href="#">Цены на услуги</a>
+                </li>
+                <li class="site-list__item">
+                  <a class="site-list__link link" href="#">Адреса сервисных центров</a>
+                </li>
+                <li class="site-list__item">
+                  <a class="site-list__link link" href="#">Специальные цены</a>
+                </li>
+                <li class="site-list__item">
+                  <a class="site-list__link link" href="#">Отзывы</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
 
-      </main>
-      <footer>
+          <section class="page-main__about-us about-us">
+            <div class="about-us__info about-us-info">
+              <div class="about-us-info__text about-us-text">
+                <p class="about-us-text__paragraph">
+                  Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.
+                </p>
+                <p class="about-us-text__paragraph">
+                  Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.
+                </p>
+              </div>
+              <button type="button" class="about-us-info__show-all-button show-all-button">Читать далее</button>
+            </div>
+            <div class="about-us__picture-wrapper">
+              <picture>
+                <source srcset="images/cps-small.png" media="(max-width: 320px)">
+                <source srcset="images/cps-medium.png" media="(max-width: 528px)">
+                <source srcset="images/cps-big.png" media="(min-width: 768px)">
+                <img class="about-us__picture" src="images/cps-big.png" alt="Логотип компании">
+              </picture>
+            </div>
+          </section>
 
-      </footer>
-    </div>
+        </main>
+        <footer>
+
+        </footer>
+      </div>
   </body>
 
 </html>

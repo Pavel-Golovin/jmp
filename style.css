@@ -1,5 +1,5 @@
 @font-face {
-    font-family: 'TT Lakes';
+    font-family: 'TT Lakes Regular';
     src: url('/fonts/TTLakes-Regular.eot');
     src: local('TT Lakes Regular'), local('TTLakes-Regular'),
     url('fonts/TTLakes-Regular.eot?#iefix') format('embedded-opentype'),
@@ -9,7 +9,7 @@
     font-style: normal;
 }
 @font-face {
-    font-family: 'TT Lakes';
+    font-family: 'TT Lakes Bold';
     src: url('fonts/TTLakes-Bold.eot');
     src: local('TT Lakes Bold'), local('TTLakes-Bold'),
     url('fonts/TTLakes-Bold.eot?#iefix') format('embedded-opentype'),
@@ -20,7 +20,7 @@
 }
 
 @font-face {
-    font-family: 'TT Lakes';
+    font-family: 'TT Lakes Medium';
     src: url('fonts/TTLakes-Medium.eot');
     src: local('TT Lakes Medium'), local('TTLakes-Bold'),
     url('fonts/TTLakes-Medium.eot?#iefix') format('embedded-opentype');
@@ -40,18 +40,30 @@ html {
     box-sizing: inherit;
 }
 
-body{
-    font-family: 'TT Lakes', sans-serif;
+.page-body {
+    font-family: 'TT Lakes Regular', sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    margin: 0;
+    padding: 0;
 }
 
 /* for header: */
 
 .page-wrapper {
-    width: 320px;
+    width: auto;
 }
 
 .page-header {
-    outline: 2px dashed red;
     height: 88px;
     display: flex;
     justify-content: flex-end;
@@ -105,17 +117,142 @@ body{
     margin-left: 16px;
 }
 
-.page-header__request-icon {
+.page-header__service-list {
     order: 4;
     margin-right: 16px;
 }
 
+.communications {
+    width: 152px;
+    display: flex;
+}
+
+.services {
+    width: 96px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.page-header__request-icon {
+
+}
+
 .page-header__repair-status-icon {
-    order: 5;
-    margin-right: 16px;
+
 }
 
 /**/
+
+.main-and-footer-background {
+    background: #F8F8F8;
+}
+
+/* for main */
+
+.page-main {
+    border-top: 1px solid #D9FFF5;
+    display: flex;
+    flex-direction: column;
+}
+
+.title-and-nav-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.page-title {
+    background-image: url("data:image/svg+xml,%0A%3Csvg width='4' height='40' viewBox='0 0 4 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M4 4C4 1.79086 2.20914 0 0 0V40C2.20914 40 4 38.2091 4 36V4Z' fill='%2341F6D7'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    font-family: 'TT Lakes Bold', sans-serif;
+    font-size: 28px;
+    line-height: 40px;
+    padding-left: 16px;
+    margin-top: 24px;
+    margin-bottom: 0;
+}
+
+.page-main__nav {
+    margin-top: 24px;
+    margin-left: 16px;
+}
+
+.site-list {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: scroll;
+}
+
+.site-list__item {
+    white-space: nowrap;
+    padding: 8px 9px 8px 16px;
+    border: transparent;
+    border-radius: 0;
+    background: transparent;
+    margin-right: 20px;
+}
+
+.site-list__item--active {
+    white-space: nowrap;
+    padding: 8px 9px 8px 16px;
+    border: 2px solid #B8FFEC;
+    border-radius: 6px;
+    background: #FFFFFF;
+    margin-right: 20px;
+}
+
+.link {
+    text-decoration: none;
+    font-family: 'TT Lakes Medium', sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    color: #7E7E82;
+}
+
+.about-us {
+    display: flex;
+    flex-direction: column;
+}
+
+.about-us__info {
+    margin-bottom: 16px;
+}
+
+.about-us-info__text {
+    margin: 24px 16px 16px;
+}
+
+.about-us-text {
+    height: 90px;
+    overflow: hidden;
+}
+
+.about-us-text__paragraph {
+    font-size: 14px;
+    line-height: 18px;
+    font-family: "TT Lakes Regular", sans-serif;
+}
+
+.about-us-info__show-all-button {
+    margin-left: 24px;
+    padding-left: 21px;
+}
+
+.show-all-button {
+    background-image: url("data:image/svg+xml,%0A%3Csvg width='8' height='11' viewBox='0 0 8 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M6.50008 0.500076L4.00008 3.00008L1.50008 0.500076C1.22393 0.223933 0.776218 0.223933 0.500076 0.500076C0.223933 0.776218 0.223933 1.22393 0.500075 1.50008L3.29297 4.29297C3.68349 4.68349 4.31666 4.68349 4.70718 4.29297L7.50008 1.50008C7.77622 1.22393 7.77622 0.776218 7.50008 0.500076C7.22393 0.223933 6.77622 0.223933 6.50008 0.500076ZM6.50008 6.50008L4.00008 9.00008L1.50008 6.50008C1.22393 6.22393 0.776218 6.22393 0.500076 6.50008C0.223933 6.77622 0.223933 7.22393 0.500075 7.50008L3.29297 10.293C3.68349 10.6835 4.31666 10.6835 4.70718 10.293L7.50008 7.50008C7.77622 7.22393 7.77622 6.77622 7.50008 6.50008C7.22393 6.22393 6.77622 6.22393 6.50008 6.50008Z' fill='%2341F6D7'/%3E%3C/svg%3E");
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: 0 8px;
+    border: none;
+    height: 24px;
+    line-height: 24px;
+}
+
+
+/* media */
+
+
+
 
 
 
