@@ -14,7 +14,9 @@
       <div class="header-background"></div>
         <header class="page-header">
           <button type="button" class="page-header__menu-icon icon icon--burger"></button>
+
           <img src="images/logo.svg" alt="Логотип CPS" width="98" height="52" class="page-header__logo">
+
           <ul class="page-header__communications-list communications">
             <li class="communications__item">
               <button type="button" class="communications__call-icon icon icon--call"></button>
@@ -23,17 +25,26 @@
               <button type="button" class="communications__chat-icon icon icon--chat"></button>
             </li>
           </ul>
-          <ul class="page-header__profile-management profile-management">
-            <li class="profile-management__item">
-              <a href="#" class="profile-management__profile-icon icon icon--profile"></a>
-            </li>
-          </ul>
+
+          <a href="#" class="profile-management__profile-icon icon icon--profile"></a>
+
           <ul class="page-header__service-list services">
+            <!--
             <li class="services__item">
-              <button type="button" class="services__request-icon icon icon--tools"></button>
+              <a href="#" class="services__request-icon icon icon--tools"><span>Оставить заявку</span></a>
             </li>
             <li class="services__item">
-              <button type="button" class="services__repair-status-icon icon icon--notepad"></button>
+              <a href="#" class="services__repair-status-icon icon icon--notepad"><span>Статус ремонта</span></a>
+            </li>
+            -->
+            <li class="services__item">
+              <a href="#">Оставить заявку<span class="services__request-icon icon icon--tools"></span></a>
+            </li>
+            <li class="services__item">
+              <a href="#">
+                <span>Статус ремонта</span>
+                <span class="services__repair-status-icon icon icon--notepad"></span>
+              </a>
             </li>
           </ul>
         </header>
@@ -84,7 +95,7 @@
               <picture>
                 <source srcset="images/cps-small.png" media="(max-width: 320px)">
                 <source srcset="images/cps-medium.png" media="(max-width: 528px)">
-                <source srcset="images/cps-big.png" media="(min-width: 768px)">
+                <source srcset="images/cps-medium.png" media="(min-width: 768px)">
                 <img class="about-us__picture" src="images/cps-big.png" alt="Логотип компании">
               </picture>
             </div>
