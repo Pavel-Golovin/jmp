@@ -59,7 +59,7 @@ p {
 
 /* for header: */
 
-.page-header {
+.header {
     height: 88px;
     display: flex;
     justify-content: flex-start;
@@ -110,17 +110,17 @@ p {
     background-position: center;
 }
 
-.page-header__menu-icon {
+.header__menu-icon {
     order: 1;
     margin-left: 16px;
 }
 
-.page-header__logo {
+.header__logo {
     order: 2;
     margin-left: 16px;
 }
 
-.page-header::before {
+.header::before {
     content: "";
     background: #EAEAEA;
     border-radius: 1px;
@@ -131,7 +131,7 @@ p {
     margin-left: 16px;
 }
 
-.page-header__communications-list {
+.header__communications-list {
     order: 4;
 }
 
@@ -139,7 +139,7 @@ p {
     order: 5;
 }
 
-.page-header::after {
+.header::after {
     content: "";
     display: none;
     background: #EAEAEA;
@@ -151,7 +151,7 @@ p {
     margin-right: 12px;
 }
 
-.page-header__service-list {
+.header__service-list {
     order: 7;
     margin-right: 16px;
 }
@@ -311,24 +311,24 @@ p {
 /* media */
 
 @media screen and (min-width: 768px) {
-    .page-header__logo {
+    .header__logo {
         order: 3;
         margin-right: auto;
         margin-left: 0;
     }
-    .page-header::before {
+    .header::before {
         order: 2;
         margin-left: 16px;
         margin-right: 16px;
     }
-    .page-header::after {
+    .header::after {
         display: block;
     }
     .communications {
         display: flex;
         justify-content: space-between;
     }
-    .page-header__communications-list {
+    .header__communications-list {
         margin-right: 16px;
     }
     .profile-management__profile-icon {
@@ -356,11 +356,11 @@ p {
 }
 
 @media screen and (min-width: 1120px) {
-    .page-header {
+    .header {
         visibility: hidden;
         margin-top: -88px;
     }
-    .page-header__service-list {
+    .header__service-list {
         position: absolute;
         right: 32px;
         top: 42px;
