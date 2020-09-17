@@ -138,7 +138,7 @@ p {
     display: flex;
 }
 
-.communications {
+.contacts-list {
     width: 96px;
     display: none;
 }
@@ -308,11 +308,11 @@ p {
         margin-right: 16px;
         margin-left: 0;
     }
-    .communications {
+    .contacts-list {
         display: flex;
         justify-content: space-between;
     }
-    .header__communications-list {
+    .header__contacts-list {
         margin-right: 16px;
     }
     .profile {
