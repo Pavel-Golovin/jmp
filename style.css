@@ -220,7 +220,7 @@ p {
     margin-bottom: 0;
 }
 
-.page-main__nav {
+.main-header__site-nav {
     margin-top: 24px;
     margin-left: 16px;
 }
@@ -233,16 +233,19 @@ p {
 
 .site-list__item {
     white-space: nowrap;
-    padding: 8px 9px 8px 16px;
     border: transparent;
     border-radius: 0;
     background: transparent;
     margin-right: 20px;
 }
 
+.site-list__link {
+    display: block;
+    padding: 8px 9px 8px 16px;
+}
+
 .site-list__item--active {
     white-space: nowrap;
-    padding: 8px 9px 8px 16px;
     border: 2px solid #B8FFEC;
     border-radius: 6px;
     background: #FFFFFF;
