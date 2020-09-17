@@ -111,12 +111,10 @@ p {
 }
 
 .header__menu-icon {
-    order: 1;
     margin-left: 16px;
 }
 
 .header__logo {
-    order: 2;
     margin-left: 16px;
     margin-right: auto;
 }
@@ -132,28 +130,7 @@ p {
     margin-left: 16px;
 }
 
-.header__communications-list {
-    order: 4;
-}
-
-.profile-management__profile-icon {
-    order: 5;
-}
-
-.header::after {
-    content: "";
-    display: none;
-    background: #EAEAEA;
-    border-radius: 1px;
-    width: 2px;
-    height: 32px;
-    order: 6;
-    margin-left: 20px;
-    margin-right: 12px;
-}
-
 .header__service-list {
-    order: 7;
     margin-right: 16px;
 }
 
@@ -191,11 +168,25 @@ p {
 .services__icon {
     display: block;
     width: 40px;
-    margin-left: 8px;
+    margin-left: 20px;
 }
 
-.profile-management__profile-icon {
+.profile {
     display: none;
+}
+
+.profile__link {
+    display: block;
+}
+
+.profile::after {
+    content: "";
+    align-self: center;
+    background: #EAEAEA;
+    border-radius: 1px;
+    width: 2px;
+    height: 32px;
+    margin-left: 20px;
 }
 
 /**/
@@ -211,13 +202,6 @@ p {
     display: flex;
     flex-direction: column;
 }
-/*
-.title-and-nav-wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-}
- */
 
 .main-header {
     display: flex;
@@ -317,17 +301,12 @@ p {
 
 @media screen and (min-width: 768px) {
     .header__logo {
-        order: 3;
         margin-right: auto;
-        margin-left: 0;
     }
     .logo::before {
         order: 0;
-        margin-left: 16px;
         margin-right: 16px;
-    }
-    .header::after {
-        display: block;
+        margin-left: 0;
     }
     .communications {
         display: flex;
@@ -336,8 +315,8 @@ p {
     .header__communications-list {
         margin-right: 16px;
     }
-    .profile-management__profile-icon {
-        display: block;
+    .profile {
+        display: flex;
     }
     .about-us {
         flex-direction: row;
