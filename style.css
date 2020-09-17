@@ -118,16 +118,17 @@ p {
 .header__logo {
     order: 2;
     margin-left: 16px;
+    margin-right: auto;
 }
 
-.header::before {
+.logo::before {
     content: "";
+    align-self: center;
     background: #EAEAEA;
     border-radius: 1px;
     width: 2px;
     height: 32px;
-    order: 3;
-    margin-right: auto;
+    order: 1;
     margin-left: 16px;
 }
 
@@ -154,6 +155,10 @@ p {
 .header__service-list {
     order: 7;
     margin-right: 16px;
+}
+
+.logo {
+    display: flex;
 }
 
 .communications {
@@ -316,8 +321,8 @@ p {
         margin-right: auto;
         margin-left: 0;
     }
-    .header::before {
-        order: 2;
+    .logo::before {
+        order: 0;
         margin-left: 16px;
         margin-right: 16px;
     }
