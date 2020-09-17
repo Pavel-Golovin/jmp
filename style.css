@@ -59,10 +59,6 @@ p {
 
 /* for header: */
 
-.page-wrapper {
-    width: auto;
-}
-
 .page-header {
     height: 88px;
     display: flex;
@@ -210,8 +206,15 @@ p {
     display: flex;
     flex-direction: column;
 }
-
+/*
 .title-and-nav-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+ */
+
+.main-header {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
