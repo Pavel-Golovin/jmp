@@ -44,6 +44,7 @@ html {
     font-family: 'TT Lakes Regular', sans-serif;
     display: flex;
     flex-direction: column;
+    background: #F8F8F8;
 }
 
 ul {
@@ -64,6 +65,7 @@ p {
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    background: #FFFFFF;
 }
 
 .ui-button {
