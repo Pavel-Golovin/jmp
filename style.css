@@ -206,16 +206,10 @@ p {
 
 /* for main */
 
-.page-main {
+.main {
     border-top: 1px solid #D9FFF5;
     display: flex;
     flex-direction: column;
-}
-
-.main-header {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
 }
 
 .page-title {
@@ -225,11 +219,14 @@ p {
     font-size: 28px;
     line-height: 40px;
     padding-left: 16px;
+}
+
+.main__page-title {
     margin-top: 42px;
     margin-bottom: 0;
 }
 
-.main-header__site-nav {
+.main__site-nav {
     margin-top: 24px;
     margin-left: 16px;
 }
