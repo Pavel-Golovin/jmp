@@ -40,7 +40,7 @@ html {
     box-sizing: inherit;
 }
 
-.page-body {
+.body {
     font-family: 'TT Lakes Regular', sans-serif;
     display: flex;
     flex-direction: column;
