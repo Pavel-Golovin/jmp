@@ -220,6 +220,10 @@ a {
     padding-top: 0;
 }
 
+.main >* {
+    outline: 2px dotted crimson;
+}
+
 .page-title {
     background-image: url("data:image/svg+xml,%0A%3Csvg width='4' height='40' viewBox='0 0 4 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M4 4C4 1.79086 2.20914 0 0 0V40C2.20914 40 4 38.2091 4 36V4Z' fill='%2341F6D7'/%3E%3C/svg%3E");
     background-repeat: no-repeat;
@@ -235,7 +239,7 @@ a {
 
 .main__nav {
     margin-top: 24px;
-    margin-left: 16px;
+    padding-left: 16px;
 }
 
 .nav__site-list {
@@ -266,18 +270,20 @@ a {
     margin-right: 20px;
 }
 
+.main__article {
+    margin-top: 24px;
+}
+
 .article {
     display: flex;
     flex-direction: column;
 }
 
 .article__info {
-    margin-top: 24px;
-    margin-bottom: 16px;
+    padding: 0 16px;
 }
 
 .article__text {
-    margin: 0 16px 16px;
     height: 90px;
     overflow: hidden;
 }
@@ -301,7 +307,7 @@ a {
 }
 
 .article__read-more {
-    margin-left: 16px;
+    margin-top: 16px;
 }
 
 .read-more::before {
@@ -314,6 +320,10 @@ a {
     left: 8px;
 }
 
+.article__picture {
+    margin-top: 16px;
+}
+
 .article__img {
     width: 100%;
 }
@@ -321,6 +331,10 @@ a {
 /* media */
 
 @media screen and (min-width: 768px) {
+    .header {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
     .header__logo {
         margin-left: 42px;
     }
@@ -345,23 +359,26 @@ a {
     }
     .main__nav {
         margin-top: 32px;
-        margin-left: 24px;
+        padding-left: 24px;
     }
     .article {
-        flex-direction: row;
-    }
-    .article__picture {
-        margin-left: 48px;
         margin-top: 32px;
-        margin-right: 25px;
+        flex-direction: row;
+        padding: 0 24px;
+    }
+    .article__info {
+        padding: 0 0;
     }
     .article__text  {
         height: 160px;
-        margin-top: 32px;
         overflow: hidden;
     }
     .article__paragraph {
         line-height: 20px;
+    }
+    .article__picture {
+        margin-left: 48px;
+        margin-top: 0;
     }
     .article__img {
         border-radius: 6px;
@@ -396,10 +413,17 @@ a {
     }
     .main__nav {
         margin-top: 8px;
-        margin-left: 32px;
+        padding-left: 32px;
     }
     .nav__site-list {
         flex-wrap: wrap;
+    }
+    .main__article {
+        margin-top: 0;
+        padding: 0 29px 0 34px;
+    }
+    .article__picture {
+        margin-left: 36px;
     }
 }
 
