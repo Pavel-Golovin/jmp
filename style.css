@@ -56,6 +56,10 @@ p {
     padding: 0;
 }
 
+h1 {
+    margin: 0;
+}
+
 a {
     text-decoration: none;
     font-family: 'TT Lakes Medium', sans-serif;
@@ -164,7 +168,7 @@ a {
     font-family: 'TT Lakes Regular', sans-serif;
     font-weight: bolder;
     align-self: center;
-    margin-left: 32px;
+    /*margin-left: 32px;*/
     font-size: 16px;
     line-height: 24px;
     color: #1B1C21;
@@ -208,16 +212,13 @@ a {
 
 /**/
 
-.main-and-footer-background {
-    background: #F8F8F8;
-}
-
 /* for main */
 
 .main {
     border-top: 1px solid #D9FFF5;
     display: flex;
     flex-direction: column;
+    padding-top: 0;
 }
 
 .page-title {
@@ -230,8 +231,7 @@ a {
 }
 
 .main__page-title {
-    margin-top: 42px;
-    margin-bottom: 0;
+    margin-top: 24px;
 }
 
 .main__nav {
@@ -266,44 +266,55 @@ a {
     margin-right: 20px;
 }
 
-.about-us {
+.article {
     display: flex;
     flex-direction: column;
 }
 
-.about-us__info {
+.article__info {
+    margin-top: 24px;
     margin-bottom: 16px;
 }
 
-.info__text {
-    margin: 24px 16px 16px;
-}
-
-.text {
+.article__text {
+    margin: 0 16px 16px;
     height: 90px;
     overflow: hidden;
 }
 
-.text__paragraph {
+.article__paragraph {
     font-size: 14px;
     line-height: 18px;
     padding-bottom: 18px;
+    letter-spacing: 0.2px;
     font-family: "TT Lakes Regular", sans-serif;
 }
 
-.info__button {
-    margin-left: 24px;
-    padding-left: 21px;
-    background-image: url("data:image/svg+xml,%0A%3Csvg width='8' height='11' viewBox='0 0 8 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M6.50008 0.500076L4.00008 3.00008L1.50008 0.500076C1.22393 0.223933 0.776218 0.223933 0.500076 0.500076C0.223933 0.776218 0.223933 1.22393 0.500075 1.50008L3.29297 4.29297C3.68349 4.68349 4.31666 4.68349 4.70718 4.29297L7.50008 1.50008C7.77622 1.22393 7.77622 0.776218 7.50008 0.500076C7.22393 0.223933 6.77622 0.223933 6.50008 0.500076ZM6.50008 6.50008L4.00008 9.00008L1.50008 6.50008C1.22393 6.22393 0.776218 6.22393 0.500076 6.50008C0.223933 6.77622 0.223933 7.22393 0.500075 7.50008L3.29297 10.293C3.68349 10.6835 4.31666 10.6835 4.70718 10.293L7.50008 7.50008C7.77622 7.22393 7.77622 6.77622 7.50008 6.50008C7.22393 6.22393 6.77622 6.22393 6.50008 6.50008Z' fill='%2341F6D7'/%3E%3C/svg%3E");
-    background-color: transparent;
-    background-repeat: no-repeat;
-    background-position: 0 8px;
-    border: none;
+.read-more {
+    display: flex;
+    align-items: center;
+    position: relative;
     height: 24px;
-    line-height: 24px;
+    padding-left: 32px;
+    border: none;
+    background-color: transparent;
 }
 
-.picture__img {
+.article__read-more {
+    margin-left: 16px;
+}
+
+.read-more::before {
+    content: "";
+    background-image: url("data:image/svg+xml,%0A%3Csvg width='8' height='11' viewBox='0 0 8 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M6.50008 0.500076L4.00008 3.00008L1.50008 0.500076C1.22393 0.223933 0.776218 0.223933 0.500076 0.500076C0.223933 0.776218 0.223933 1.22393 0.500075 1.50008L3.29297 4.29297C3.68349 4.68349 4.31666 4.68349 4.70718 4.29297L7.50008 1.50008C7.77622 1.22393 7.77622 0.776218 7.50008 0.500076C7.22393 0.223933 6.77622 0.223933 6.50008 0.500076ZM6.50008 6.50008L4.00008 9.00008L1.50008 6.50008C1.22393 6.22393 0.776218 6.22393 0.500076 6.50008C0.223933 6.77622 0.223933 7.22393 0.500075 7.50008L3.29297 10.293C3.68349 10.6835 4.31666 10.6835 4.70718 10.293L7.50008 7.50008C7.77622 7.22393 7.77622 6.77622 7.50008 6.50008C7.22393 6.22393 6.77622 6.22393 6.50008 6.50008Z' fill='%2341F6D7'/%3E%3C/svg%3E");
+    display: block;
+    width: 7px;
+    height: 10px;
+    position: absolute;
+    left: 8px;
+}
+
+.article__img {
     width: 100%;
 }
 
@@ -329,23 +340,30 @@ a {
     .profile {
         display: flex;
     }
-    .about-us {
+    .page-title {
+        padding-left: 24px;
+    }
+    .main__nav {
+        margin-top: 32px;
+        margin-left: 24px;
+    }
+    .article {
         flex-direction: row;
     }
-    .about-us__picture {
+    .article__picture {
         margin-left: 48px;
         margin-top: 32px;
         margin-right: 25px;
     }
-    .text {
+    .article__text  {
         height: 160px;
         margin-top: 32px;
         overflow: hidden;
     }
-    .text__paragraph {
+    .article__paragraph {
         line-height: 20px;
     }
-    .picture__img {
+    .article__img {
         border-radius: 6px;
         width: auto;
     }
@@ -356,14 +374,29 @@ a {
         visibility: hidden;
         margin-top: -88px;
     }
+    .main__page-title {
+        margin-top: 42px;
+        padding-left: 32px;
+    }
     .header__service-list {
+        margin-left: 0;
         position: absolute;
         right: 32px;
         top: 42px;
         visibility: visible;
     }
+    .services__item:last-of-type {
+        margin-left: 32px;
+    }
     .services__text-link {
         display: block;
+    }
+    .services__icon {
+        margin-left: 8px;
+    }
+    .main__nav {
+        margin-top: 8px;
+        margin-left: 32px;
     }
     .nav__site-list {
         flex-wrap: wrap;
