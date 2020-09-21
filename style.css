@@ -417,6 +417,7 @@ a {
     }
     .nav__list {
         flex-wrap: wrap;
+        overflow: visible;
     }
     .main__article {
         margin-top: 0;
