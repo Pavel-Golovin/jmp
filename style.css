@@ -224,7 +224,7 @@ a {
     outline: 2px dotted crimson;
 }
 
-.page-title {
+.title {
     background-image: url("data:image/svg+xml,%0A%3Csvg width='4' height='40' viewBox='0 0 4 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M4 4C4 1.79086 2.20914 0 0 0V40C2.20914 40 4 38.2091 4 36V4Z' fill='%2341F6D7'/%3E%3C/svg%3E");
     background-repeat: no-repeat;
     font-family: 'TT Lakes Bold', sans-serif;
@@ -233,7 +233,7 @@ a {
     padding-left: 16px;
 }
 
-.main__page-title {
+.main__title {
     margin-top: 24px;
 }
 
@@ -354,7 +354,7 @@ a {
     .profile {
         display: flex;
     }
-    .page-title {
+    .title {
         padding-left: 24px;
     }
     .main__nav {
@@ -391,7 +391,7 @@ a {
         visibility: hidden;
         margin-top: -88px;
     }
-    .main__page-title {
+    .main__title {
         margin-top: 42px;
         padding-left: 32px;
     }
