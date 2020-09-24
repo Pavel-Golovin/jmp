@@ -133,7 +133,7 @@ a {
     position: relative;
 }
 
-.logo::before {
+.header__logo::before {
     content: "";
     align-self: center;
     background: #EAEAEA;
