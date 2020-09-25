@@ -444,18 +444,12 @@ a {
 
 .menu__header {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     padding: 0 24px;
     height: 88px;
 }
 
-.menu__close-btn,
-.menu__search {
-    margin-top: 23px;
-}
-
 .menu__logo {
-    margin-top: 18px;
     margin-left: 17px;
 }
 
