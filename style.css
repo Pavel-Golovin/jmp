@@ -187,7 +187,7 @@ a {
 }
 
 .contacts-list__profile {
-    display: none;
+    display: block;
     position: relative;
 }
 
@@ -502,6 +502,11 @@ a {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+}
+
+.menu__contacts-list {
+    display: flex;
+    justify-content: space-between;
 }
 
 .menu__contacts {
