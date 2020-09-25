@@ -540,10 +540,13 @@ a {
     margin-top: 40px;
 }
 
+.menu__lang-item {
+    margin-right: 7px;
+}
+
 .menu__lang-btn {
     border: none;
     padding: 0;
-    margin-right: 7px;
     background: transparent;
     text-transform: uppercase;
     font-family: "TT Lakes Regular", sans-serif;
