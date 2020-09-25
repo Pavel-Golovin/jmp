@@ -509,6 +509,7 @@ a {
 .menu__footer {
     margin-top: 252px;
     padding-left: 24px;
+    padding-bottom: 32px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
