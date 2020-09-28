@@ -431,10 +431,14 @@ a {
 
 .menu {
     background: #FFFFFF;
+    display: flex;
+    flex-direction: column;
     width: 320px;
+    min-height: 1024px;
+    height: 100vh;
     box-shadow:
-      -2px 0px 4px rgba(69, 79, 126, 0.02),
-      16px 0px 52px rgba(14, 24, 80, 0.2);
+      -2px 0 4px rgba(69, 79, 126, 0.02),
+      16px 0 52px rgba(14, 24, 80, 0.2);
 }
 
 .menu__header {
@@ -496,7 +500,7 @@ a {
 }
 
 .menu__footer {
-    margin-top: 252px;
+    margin-top: auto;
     padding-left: 24px;
     padding-right: 24px;
     padding-bottom: 32px;
