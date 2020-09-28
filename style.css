@@ -334,7 +334,6 @@ a {
     .contacts-list {
         display: flex;
         justify-content: flex-start;
-        outline: 2px solid deeppink;
     }
     .contacts-list__item:not(:first-child) {
         margin-left: 16px;
