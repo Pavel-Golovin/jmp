@@ -198,7 +198,7 @@ a {
     width: 2px;
     height: 32px;
     position: absolute;
-    right: -20px;
+    right: -22px;
     top: 4px;
 }
 
@@ -333,10 +333,11 @@ a {
     }
     .contacts-list {
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-start;
+        outline: 2px solid deeppink;
     }
-    .contacts-list__profile {
-        display: block;
+    .contacts-list__item:not(:first-child) {
+        margin-left: 16px;
     }
     .header__contacts-list {
         margin-left: auto;
@@ -503,11 +504,6 @@ a {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-}
-
-.menu__contacts-list {
-    display: flex;
-    justify-content: space-between;
 }
 
 .menu__contacts {
