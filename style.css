@@ -58,7 +58,8 @@ p {
     padding: 0;
 }
 
-h1 {
+h1,
+h2 {
     margin: 0;
 }
 
@@ -292,7 +293,7 @@ a {
     font-family: "TT Lakes Regular", sans-serif;
 }
 
-.read-more {
+.show-more {
     display: flex;
     align-items: center;
     position: relative;
@@ -306,7 +307,7 @@ a {
     margin-top: 16px;
 }
 
-.read-more::before {
+.show-more::before {
     content: "";
     background-image: url("data:image/svg+xml,%0A%3Csvg width='8' height='11' viewBox='0 0 8 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M6.50008 0.500076L4.00008 3.00008L1.50008 0.500076C1.22393 0.223933 0.776218 0.223933 0.500076 0.500076C0.223933 0.776218 0.223933 1.22393 0.500075 1.50008L3.29297 4.29297C3.68349 4.68349 4.31666 4.68349 4.70718 4.29297L7.50008 1.50008C7.77622 1.22393 7.77622 0.776218 7.50008 0.500076C7.22393 0.223933 6.77622 0.223933 6.50008 0.500076ZM6.50008 6.50008L4.00008 9.00008L1.50008 6.50008C1.22393 6.22393 0.776218 6.22393 0.500076 6.50008C0.223933 6.77622 0.223933 7.22393 0.500075 7.50008L3.29297 10.293C3.68349 10.6835 4.31666 10.6835 4.70718 10.293L7.50008 7.50008C7.77622 7.22393 7.77622 6.77622 7.50008 6.50008C7.22393 6.22393 6.77622 6.22393 6.50008 6.50008Z' fill='%2341F6D7'/%3E%3C/svg%3E");
     display: block;
@@ -564,3 +565,18 @@ a {
     transition-property: opacity;
     opacity: 0.7;
 }
+
+/* Стили брендов*/
+
+.brands__title {
+    padding: 16px 16px;
+    background: linear-gradient(to right, #F8F8F8 50%, #FFFFFF 100%);
+    text-transform: uppercase;
+    font-family: "TT Lakes Regular", sans-serif;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    color: #7E7E82;
+    letter-spacing: -0.2px;
+}
+
