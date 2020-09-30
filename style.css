@@ -580,3 +580,17 @@ a {
     letter-spacing: -0.2px;
 }
 
+.brands__link {
+    display: flex;
+    align-items: center;
+    background: #FFFFFF;
+    border: 1px solid #EAEAEA;
+    border-radius: 6px;
+    width: 240px;
+    height: 72px;
+    padding-left: 16px;
+}
+
+brands__img {
+
+}
