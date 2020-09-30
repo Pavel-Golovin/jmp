@@ -9,71 +9,109 @@
   <link rel="stylesheet" href="normalize.css">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <style>
+      .swiper-container {
+          height: 300px;
+          width: 300px;
+          margin: auto;
+      }
+      .swiper-slide {
+          background: hotpink;
+      }
+  </style>
 </head>
 <body class="body">
   <section class="brands">
     <h2 class="brands__title">Ремонт техники различных брендов</h2>
-    <ul class="brands__list swiper-container">
-      <li class="brands__item swiper-slide">
-        <a href="#" class="brands__link">
-          <img src="images/lenovo.png" alt="Леново" class="brands__img">
-        </a>
-      </li>
-      <li class="brands__item swiper-slide">
-        <a href="#" class="brands__link">
-          <img src="images/samsung.png" alt="Самсунг" class="brands__img">
-        </a>
-      </li>
-      <li class="brands__item swiper-slide">
-        <a href="#" class="brands__link">
-          <img src="images/apple.png" alt="Эппл" class="brands__img">
-        </a>
-      </li>
-      <li class="brands__item swiper-slide">
-        <a href="#" class="brands__link">
-          <img src="images/view-sonic.png" alt="Вью-соник" class="brands__img">
-        </a>
-      </li>
-      <li class="brands__item swiper-slide">
-        <a href="#" class="brands__link">
-          <img src="images/bosh.png" alt="Бош" class="brands__img">
-        </a>
-      </li>
-      <li class="brands__item swiper-slide">
-        <a href="#" class="brands__link">
-          <img src="images/hp.png" alt="эйч-пи" class="brands__img">
-        </a>
-      </li>
-      <li class="brands__item swiper-slide">
-        <a href="#" class="brands__link">
-          <img src="images/acer.png" alt="Эйсор" class="brands__img">
-        </a>
-      </li>
-      <li class="brands__item swiper-slide">
-        <a href="#" class="brands__link">
-          <img src="images/sony.png" alt="Сони" class="brands__img">
-        </a>
-      </li>
-      <li class="brands__item swiper-slide">
-        <a href="#" class="brands__link">
-          <img src="images/lenovo.png" alt="Леново" class="brands__img">
-        </a>
-      </li>
-      <li class="brands__item swiper-slide">
-        <a href="#" class="brands__link">
-          <img src="images/samsung.png" alt="Самсунг" class="brands__img">
-        </a>
-      </li>
-      <li class="brands__item swiper-slide">
-        <a href="#" class="brands__link">
-          <img src="images/apple.png" alt="Эппл" class="brands__img">
-        </a>
-      </li>
-    </ul>
-    <div class="brands__pagination swiper-pagination"></div>
+    <div class="swiper-container">
+      <ul class="swiper-wrapper">
+        <li class="swiper-slide">Slide 1</li>
+        <li class="swiper-slide">Slide 2</li>
+        <li class="swiper-slide">Slide 3</li>
+        <li class="swiper-slide">Slide 4</li>
+        <li class="swiper-slide">Slide 5</li>
+      </ul>
+      <div class="swiper-pagination"></div>
+    </div>
+
+
     <button type="button" class="brands__show-more-btn show-more">Показать всё</button>
   </section>
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script>
+      let mySwiper = new Swiper('.swiper-container', {
+          direction: 'horizontal',
+          loop: true,
+
+          pagination: {
+              el: '.swiper-pagination',
+              clickable: true,
+          }
+      });
+  </script>
 </body>
 </html>
+
+
+<!--
+<div class="brands__swiper swiper-container">
+  <ul class="brands__list swiper-wrapper">
+    <li class="brands__item swiper-slide">
+      <a href="#" class="brands__link">
+        <img src="images/lenovo.png" alt="Леново" class="brands__img">
+      </a>
+    </li>
+    <li class="brands__item swiper-slide">
+      <a href="#" class="brands__link">
+        <img src="images/samsung.png" alt="Самсунг" class="brands__img">
+      </a>
+    </li>
+    <li class="brands__item swiper-slide">
+      <a href="#" class="brands__link">
+        <img src="images/apple.png" alt="Эппл" class="brands__img">
+      </a>
+    </li>
+    <li class="brands__item swiper-slide">
+      <a href="#" class="brands__link">
+        <img src="images/view-sonic.png" alt="Вью-соник" class="brands__img">
+      </a>
+    </li>
+    <li class="brands__item swiper-slide">
+      <a href="#" class="brands__link">
+        <img src="images/bosh.png" alt="Бош" class="brands__img">
+      </a>
+    </li>
+    <li class="brands__item swiper-slide">
+      <a href="#" class="brands__link">
+        <img src="images/hp.png" alt="эйч-пи" class="brands__img">
+      </a>
+    </li>
+    <li class="brands__item swiper-slide">
+      <a href="#" class="brands__link">
+        <img src="images/acer.png" alt="Эйсор" class="brands__img">
+      </a>
+    </li>
+    <li class="brands__item swiper-slide">
+      <a href="#" class="brands__link">
+        <img src="images/sony.png" alt="Сони" class="brands__img">
+      </a>
+    </li>
+    <li class="brands__item swiper-slide">
+      <a href="#" class="brands__link">
+        <img src="images/lenovo.png" alt="Леново" class="brands__img">
+      </a>
+    </li>
+    <li class="brands__item swiper-slide">
+      <a href="#" class="brands__link">
+        <img src="images/samsung.png" alt="Самсунг" class="brands__img">
+      </a>
+    </li>
+    <li class="brands__item swiper-slide">
+      <a href="#" class="brands__link">
+        <img src="images/apple.png" alt="Эппл" class="brands__img">
+      </a>
+    </li>
+  </ul>
+  <div class="brands__pagination swiper-pagination"></div>
+</div>-->
