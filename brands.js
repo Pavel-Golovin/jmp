@@ -1,5 +1,5 @@
-const showAndHideToggle = document.querySelector('.brands__show-all');
-const brandsList = document.querySelector('.swiper-wrapper');
+const showAndHideToggle = document.querySelector('.section__show-all');
+const sectionList = document.querySelector('.swiper-wrapper');
 const swiperContainer = document.querySelector('.swiper-container');
 
 let isMobile =  document.documentElement.clientWidth < 768;
@@ -7,7 +7,7 @@ let isMobile =  document.documentElement.clientWidth < 768;
 showAndHideToggle.addEventListener('click', function() {
     this.innerText = (this.innerText === 'Показать всё') ? 'Скрыть' : 'Показать всё';
     this.classList.toggle('toggle-btn--reversed');
-    swiperContainer.classList.toggle('brands-swiper--all');
+    swiperContainer.classList.toggle('section-swiper--all');
 });
 
 let mySwiper = new Swiper (swiperContainer, {
@@ -33,5 +33,5 @@ if (isMobile) {
   mySwiper.init();
   swiperContainer.style.height = "100px";
   showAndHideToggle.style.display = "none";
-    brandsList.style.flexWrap = "nowrap";
+    sectionList.style.flexWrap = "nowrap";
 }

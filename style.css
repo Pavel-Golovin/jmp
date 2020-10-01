@@ -481,24 +481,24 @@ a {
 
 /* Стили брендов*/
 
-.brands__title {
+.section__title {
   padding: 16px 16px;
   background: linear-gradient(to right, #F8F8F8 50%, #FFFFFF 100%);
 }
 
-.brands__list {
+.section__list {
     display: flex;
     flex-wrap: wrap;
 }
 
-.brands__item {
+.section__item {
     width: 224px;
     height: 72px;
     margin-right: 24px;
     margin-bottom: 16px;
 }
 
-.brands__link {
+.section__link {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -510,17 +510,17 @@ a {
     padding-left: 16px;
 }
 
-.brands__show-all {
+.section__show-all {
     margin-left: 32px;
     margin-top: 8px;
 }
-.brands__swiper {
+.section__swiper {
     padding-left: 16px;
     margin-top: 16px;
     height: 160px;
 }
 
-.brands-swiper--all {
+.section-swiper--all {
     height: auto;
 }
 
