@@ -73,16 +73,6 @@ a {
 
 /* for header: */
 
-.h2 {
-   text-transform: uppercase;
-    font-family: "TT Lakes Regular", sans-serif;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 24px;
-    color: #7E7E82;
-    letter-spacing: -0.2px;
-}
-
 .ui-button {
     background-color: #FF3E79;
     width: 40px;
@@ -482,8 +472,15 @@ a {
 /* Стили брендов*/
 
 .section__title {
-  padding: 16px 16px;
-  background: linear-gradient(to right, #F8F8F8 50%, #FFFFFF 100%);
+    text-transform: uppercase;
+    font-family: "TT Lakes Regular", sans-serif;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    color: #7E7E82;
+    letter-spacing: -0.2px;
+    padding: 16px 16px;
+    background: linear-gradient(to right, #F8F8F8 50%, #FFFFFF 100%);
 }
 
 .section__list {
