@@ -580,17 +580,34 @@ a {
     letter-spacing: -0.2px;
 }
 
+.brands__list {
+    display: flex;
+    flex-wrap: nowrap;
+    background: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%);
+}
+
 .brands__link {
     display: flex;
     align-items: center;
     background: #FFFFFF;
     border: 1px solid #EAEAEA;
+    box-sizing: border-box;
     border-radius: 6px;
-    width: 240px;
     height: 72px;
     padding-left: 16px;
 }
 
-brands__img {
-
+.swiper-container {
+    height: 100px;
+    width: 100%;
+    padding-left: 16px;
+    margin-top: 16px;
 }
+
+.swiper-pagination-bullet {
+    background-color: #DDDDDD;
+}
+.swiper-pagination-bullet-active {
+    background-color: #B5B6BC;
+}
+
