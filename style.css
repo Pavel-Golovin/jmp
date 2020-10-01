@@ -582,7 +582,7 @@ a {
 
 .brands__list {
     display: flex;
-    flex-wrap: wrap;
+    /*flex-wrap: wrap;*/
 }
 
 .brands__item {
