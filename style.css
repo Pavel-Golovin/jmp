@@ -325,100 +325,6 @@ a {
     width: 100%;
 }
 
-/* media */
-
-@media screen and (min-width: 768px) {
-    .header {
-        padding-left: 24px;
-        padding-right: 24px;
-    }
-    .header__logo {
-        margin-left: 42px;
-    }
-    .logo::before {
-        left: -20px;
-    }
-    .header__service-list {
-        margin-left: 42px;
-    }
-    .header__contacts-list {
-        display: flex;
-        margin-left: auto;
-    }
-    .title {
-        padding-left: 24px;
-    }
-    .main__nav {
-        margin-top: 32px;
-        padding-left: 24px;
-    }
-    .article {
-        margin-top: 32px;
-        flex-direction: row;
-        padding: 0 24px;
-    }
-    .article__info {
-        padding: 0 0;
-    }
-    .article__text  {
-        height: 160px;
-        overflow: hidden;
-    }
-    .article__paragraph {
-        line-height: 20px;
-    }
-    .article__picture {
-        margin-left: 48px;
-        margin-top: 0;
-    }
-    .article__img {
-        border-radius: 6px;
-        width: auto;
-    }
-}
-
-@media screen and (min-width: 1120px) {
-    .header {
-        visibility: hidden;
-        margin-top: -88px;
-    }
-    .main__title {
-        margin-top: 42px;
-        padding-left: 32px;
-    }
-    .header__service-list {
-        margin-left: 0;
-        position: absolute;
-        right: 32px;
-        top: 42px;
-        visibility: visible;
-    }
-    .services__item:last-of-type {
-        margin-left: 32px;
-    }
-    .services__text-link {
-        display: block;
-    }
-    .services__icon {
-        margin-left: 8px;
-    }
-    .main__nav {
-        margin-top: 8px;
-        padding-left: 32px;
-    }
-    .nav__list {
-        flex-wrap: wrap;
-        overflow: visible;
-    }
-    .main__article {
-        margin-top: 0;
-        padding: 0 29px 0 34px;
-    }
-    .article__picture {
-        margin-left: 36px;
-    }
-}
-
 /* Стили для блока menu.css */
 
 .ui-button--close {
@@ -441,8 +347,8 @@ a {
     min-height: 1024px;
     height: 100vh;
     box-shadow:
-      -2px 0 4px rgba(69, 79, 126, 0.02),
-      16px 0 52px rgba(14, 24, 80, 0.2);
+            -2px 0 4px rgba(69, 79, 126, 0.02),
+            16px 0 52px rgba(14, 24, 80, 0.2);
 }
 
 .menu__header {
@@ -582,16 +488,18 @@ a {
 
 .brands__list {
     display: flex;
-    /*flex-wrap: wrap;*/
+    flex-wrap: nowrap;
 }
 
 .brands__item {
     width: 224px;
     margin-right: 24px;
+    margin-bottom: 16px;
 }
 
 .brands__link {
     display: flex;
+    justify-content: space-between;
     align-items: center;
     background: #FFFFFF;
     border: 1px solid #EAEAEA;
@@ -602,7 +510,6 @@ a {
 }
 
 .swiper-container {
-    height: 100px;
     width: 100%;
     padding-left: 16px;
     margin-top: 16px;
@@ -615,3 +522,96 @@ a {
     background-color: #B5B6BC;
 }
 
+/* media */
+
+@media screen and (min-width: 768px) {
+    .header {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+    .header__logo {
+        margin-left: 42px;
+    }
+    .logo::before {
+        left: -20px;
+    }
+    .header__service-list {
+        margin-left: 42px;
+    }
+    .header__contacts-list {
+        display: flex;
+        margin-left: auto;
+    }
+    .title {
+        padding-left: 24px;
+    }
+    .main__nav {
+        margin-top: 32px;
+        padding-left: 24px;
+    }
+    .article {
+        margin-top: 32px;
+        flex-direction: row;
+        padding: 0 24px;
+    }
+    .article__info {
+        padding: 0 0;
+    }
+    .article__text  {
+        height: 160px;
+        overflow: hidden;
+    }
+    .article__paragraph {
+        line-height: 20px;
+    }
+    .article__picture {
+        margin-left: 48px;
+        margin-top: 0;
+    }
+    .article__img {
+        border-radius: 6px;
+        width: auto;
+    }
+}
+
+@media screen and (min-width: 1120px) {
+    .header {
+        visibility: hidden;
+        margin-top: -88px;
+    }
+    .main__title {
+        margin-top: 42px;
+        padding-left: 32px;
+    }
+    .header__service-list {
+        margin-left: 0;
+        position: absolute;
+        right: 32px;
+        top: 42px;
+        visibility: visible;
+    }
+    .services__item:last-of-type {
+        margin-left: 32px;
+    }
+    .services__text-link {
+        display: block;
+    }
+    .services__icon {
+        margin-left: 8px;
+    }
+    .main__nav {
+        margin-top: 8px;
+        padding-left: 32px;
+    }
+    .nav__list {
+        flex-wrap: wrap;
+        overflow: visible;
+    }
+    .main__article {
+        margin-top: 0;
+        padding: 0 29px 0 34px;
+    }
+    .article__picture {
+        margin-left: 36px;
+    }
+}

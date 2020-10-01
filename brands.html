@@ -9,14 +9,6 @@
   <link rel="stylesheet" href="normalize.css">
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
   <link rel="stylesheet" href="style.css">
- <!-- <style>
-      .swiper-pagination-bullet {
-          background-color: #DDDDDD;
-      }
-      .swiper-pagination-bullet-active {
-          background-color: #B5B6BC;;
-      }
-  </style>-->
 </head>
 <body class="body">
   <section class="brands">
@@ -79,18 +71,20 @@
         </li>
       </ul>
       <div class="swiper-pagination"></div>
+      <button type="button" class="brands__show-more-btn show-more">Показать всё</button>
     </div>
-
-
-    <button type="button" class="brands__show-more-btn show-more">Показать всё</button>
   </section>
 
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
   <script>
-
-
     let isMobile =  document.documentElement.clientWidth < 768;
-    let mySwiper = new Swiper ('.swiper-container', {
+    const brandsList = document.querySelector('.swiper-wrapper');
+    const swiperContainer = document.querySelector('.swiper-container');
+
+    
+
+    let mySwiper = new Swiper (swiperContainer, {
       init: false,
       slidesPerView: 1.2,
       spaceBetween: 16,
@@ -110,6 +104,9 @@
     });
     if (isMobile) {
       mySwiper.init();
+      swiperContainer.style.height = "100px";
+    } else {
+      brandsList.style.flexWrap = "wrap";
     }
   </script>
 </body>
