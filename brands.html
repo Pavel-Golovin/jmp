@@ -87,37 +87,30 @@
 
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script>
-      /*let mySwiper = new Swiper ('.swiper-container', {
+
+
+    let isMobile =  document.documentElement.clientWidth < 768;
+    let mySwiper = new Swiper ('.swiper-container', {
+      init: false,
+      slidesPerView: 1.2,
+      spaceBetween: 16,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      breakpoints: {
+        440: {
           slidesPerView: 2,
-          direction: 'horizontal',
-          loop: false,
-          spaceBetween: 16,
-
-          pagination: {
-              el: '.swiper-pagination',
-              clickable: true,
-          }
-      });*/
-      let mySwiper = new Swiper ('.swiper-container', {
-            slidesPerView: 1.2,
-            spaceBetween: 15,
-            loop: true,
-            pagination: {
-            el: '.swiper-pagination',
-                clickable: true,
-            },
-
-            breakpoints: {
-                460: {
-                    slidesPerView: 2,
-                        spaceBetween: 10,
-                },
-
-                660: {
-                    slidesPerView: 3
-                }
-            }
-      });
+          spaceBetween: 10,
+        },
+        660: {
+          slidesPerView: 3
+        }
+      }
+    });
+    if (isMobile) {
+      mySwiper.init();
+    }
   </script>
 </body>
 </html>
