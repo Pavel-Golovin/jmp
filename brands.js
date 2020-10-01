@@ -5,11 +5,8 @@ const swiperContainer = document.querySelector('.swiper-container');
 let isMobile =  document.documentElement.clientWidth < 768;
 
 showAndHideToggle.addEventListener('click', function() {
-    if (this.innerText === 'Показать всё') {
-        this.innerText = 'Скрыть';
-    } else {
-        this.innerText = 'Показать всё';
-    }
+    this.innerText = (this.innerText === 'Показать всё') ? 'Скрыть' : 'Показать всё';
+    this.classList.toggle('toggle-btn--reversed');
     swiperContainer.classList.toggle('brands-swiper--all');
 });
 
