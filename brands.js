@@ -1,7 +1,17 @@
-
-let isMobile =  document.documentElement.clientWidth < 768;
+const showAndHideToggle = document.querySelector('.brands__show-all');
 const brandsList = document.querySelector('.swiper-wrapper');
 const swiperContainer = document.querySelector('.swiper-container');
+
+let isMobile =  document.documentElement.clientWidth < 768;
+
+showAndHideToggle.addEventListener('click', function() {
+    if (this.innerText === 'Показать всё') {
+        this.innerText = 'Скрыть';
+    } else {
+        this.innerText = 'Показать всё';
+    }
+    swiperContainer.classList.toggle('brands-swiper--all');
+});
 
 let mySwiper = new Swiper (swiperContainer, {
   init: false,
@@ -25,6 +35,6 @@ let mySwiper = new Swiper (swiperContainer, {
 if (isMobile) {
   mySwiper.init();
   swiperContainer.style.height = "100px";
-} else {
-  brandsList.style.flexWrap = "wrap";
+  showAndHideToggle.style.display = "none";
+    brandsList.style.flexWrap = "nowrap";
 }
