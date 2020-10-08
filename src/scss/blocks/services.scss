@@ -16,7 +16,7 @@
     color: #1B1C21;
     display: none;
 
-    @media screen and (min-width: 1120px) {
+    @media screen and (min-width: 1320px) {
       display: block;
     }
   }
@@ -37,7 +37,7 @@
       background-position: center;
     }
 
-    @media screen and (min-width: 1120px) {
+    @media screen and (min-width: 1320px) {
       margin-left: 8px;
     }
   }
@@ -45,7 +45,7 @@
   &__item:last-of-type {
     margin-left: 16px;
 
-    @media screen and (min-width: 1120px) {
+    @media screen and (min-width: 1320px) {
       margin-left: 32px;
     }
   }

@@ -8,7 +8,6 @@
   position: absolute;
   z-index: 1;
   top: 0;
-
   box-shadow: none;
   transform: translate(-320px);
   transition-duration: 0.4s;
@@ -19,10 +18,24 @@
     align-items: center;
     padding: 0 24px;
     height: 88px;
+
+    @media screen and (min-width: 1320px) {
+      height: 120px;
+    }
+  }
+
+  &__close-btn {
+    @media screen and (min-width: 1320px) {
+      display: none;
+    }
   }
 
   &__logo {
     margin-left: 17px;
+
+    @media screen and (min-width: 1320px) {
+      margin-left: 0;
+    }
 
     &:hover {
       transition-duration: 0.4s;
@@ -37,6 +50,10 @@
 
   &__list {
     margin-top: 12px;
+
+    @media screen and (min-width: 1320px) {
+      margin-top: 0;
+    }
   }
 
   &__link {
