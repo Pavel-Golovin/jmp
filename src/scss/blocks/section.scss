@@ -1,0 +1,53 @@
+.section {
+  &__title {
+    text-transform: uppercase;
+    font-family: "TT Lakes Regular", sans-serif;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    color: #7E7E82;
+    letter-spacing: -0.2px;
+    padding: 16px 16px;
+    background: linear-gradient(to right, #F8F8F8 50%, #FFFFFF 100%);
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    width: 224px;
+    height: 72px;
+    margin-right: 24px;
+    margin-bottom: 16px;
+  }
+
+  &__link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FFFFFF;
+    background-image: url("data:image/svg+xml,%0A%3Csvg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='1' y='1' width='38' height='38' rx='19' stroke='%23FF3E79' stroke-width='2'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M21.5 20L17.7071 16.2071C17.3166 15.8166 17.3166 15.1834 17.7071 14.7929L17.7929 14.7071C18.1834 14.3166 18.8166 14.3166 19.2071 14.7071L23.7929 19.2929C24.1834 19.6834 24.1834 20.3166 23.7929 20.7071L19.2071 25.2929C18.8166 25.6834 18.1834 25.6834 17.7929 25.2929L17.7071 25.2071C17.3166 24.8166 17.3166 24.1834 17.7071 23.7929L21.5 20Z' fill='%23FF3E79'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-position: bottom 16px right 16px;
+    border: 1px solid #EAEAEA;
+    box-sizing: border-box;
+    border-radius: 6px;
+    height: 72px;
+    padding-left: 16px;
+  }
+
+  &__show-all {
+    margin-left: 32px;
+    margin-top: 8px;
+  }
+  &__content {
+    padding-left: 16px;
+    margin-top: 16px;
+    height: 160px;
+    &--all {
+      height: auto;
+    }
+  }
+}

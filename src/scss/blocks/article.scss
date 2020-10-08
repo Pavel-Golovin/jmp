@@ -1,0 +1,68 @@
+.article {
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (min-width: 768px) {
+    margin-top: 32px;
+    flex-direction: row;
+    padding: 0 24px;
+  }
+
+  &__info {
+    padding: 0 16px;
+
+    @media screen and (min-width: 768px) {
+      padding: 0 0;
+    }
+  }
+
+  &__text {
+    height: 90px;
+    overflow: hidden;
+
+    @media screen and (min-width: 768px) {
+      height: 160px;
+      overflow: hidden;
+    }
+  }
+
+  &__paragraph {
+    font-size: 14px;
+    line-height: 18px;
+    padding-bottom: 18px;
+    letter-spacing: 0.2px;
+    font-family: "TT Lakes Regular", sans-serif;
+
+    @media screen and (min-width: 768px) {
+      line-height: 20px;
+    }
+  }
+
+  &__read-more {
+    margin-top: 16px;
+  }
+
+  &__picture {
+    margin-top: 16px;
+
+    @media screen and (min-width: 768px) {
+      margin-left: 48px;
+      margin-top: 0;
+    }
+
+    @media screen and (min-width: 1120px) {
+      margin-left: 36px;
+    }
+  }
+
+  &__img {
+    width: 100%;
+
+    @media screen and (min-width: 768px) {
+      border-radius: 6px;
+      width: auto;
+    }
+  }
+
+
+}

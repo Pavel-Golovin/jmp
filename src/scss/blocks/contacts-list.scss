@@ -1,0 +1,16 @@
+.contacts-list {
+  display: flex;
+  justify-content: flex-start;
+
+
+  &__profile {
+    display: block;
+    position: relative;
+  }
+
+  &__item {
+    &:not(:first-child) {
+      margin-left: 16px;
+    }
+  }
+}

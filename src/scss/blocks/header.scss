@@ -1,0 +1,75 @@
+.header {
+  height: 88px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background: #FFFFFF;
+  padding-left: 16px;
+  padding-right: 16px;
+
+  @media screen and (min-width: 768px) {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  @media screen and (min-width: 1120px) {
+    visibility: hidden;
+    margin-top: -88px;
+  }
+
+    &__logo {
+    margin-left: 16px;
+
+    @media screen and (min-width: 768px) {
+      margin-left: 42px;
+    }
+
+    &::before {
+      content: "";
+      align-self: center;
+      background: #EAEAEA;
+      border-radius: 1px;
+      width: 2px;
+      height: 32px;
+
+      position: absolute;
+      right: -16px;
+    }
+  }
+
+  &__service-list {
+    margin-left: auto;
+
+    @media screen and (min-width: 768px) {
+      margin-left: 42px;
+    }
+
+    @media screen and (min-width: 1120px) {
+      margin-left: 0;
+      position: absolute;
+      right: 32px;
+      top: 42px;
+      visibility: visible;
+    }
+  }
+
+  &__contacts-list {
+    display: none;
+
+    @media screen and (min-width: 768px) {
+      display: flex;
+      margin-left: auto;
+    }
+
+    .contacts-list__profile::after {
+      content: "";
+      background: #EAEAEA;
+      border-radius: 1px;
+      width: 2px;
+      height: 32px;
+      position: absolute;
+      right: -22px;
+      top: 4px;
+    }
+  }
+}

@@ -7,7 +7,7 @@ let isMobile =  document.documentElement.clientWidth < 768;
 showAndHideToggle.addEventListener('click', function() {
     this.innerText = (this.innerText === 'Показать всё') ? 'Скрыть' : 'Показать всё';
     this.classList.toggle('toggle-btn--reversed');
-    swiperContainer.classList.toggle('section-swiper--all');
+    swiperContainer.classList.toggle('section__content--all');
 });
 
 let mySwiper = new Swiper (swiperContainer, {
