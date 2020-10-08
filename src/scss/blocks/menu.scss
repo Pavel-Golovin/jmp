@@ -5,9 +5,14 @@
   width: 320px;
   min-height: 1024px;
   height: 100vh;
-  box-shadow:
-    -2px 0 4px rgba(69, 79, 126, 0.02),
-    16px 0 52px rgba(14, 24, 80, 0.2);
+  position: absolute;
+  z-index: 1;
+  top: 0;
+
+  box-shadow: none;
+  transform: translate(-320px);
+  transition-duration: 0.4s;
+  transition-property: transform;
 
   &__header {
     display: flex;
@@ -146,5 +151,12 @@
     &--active {
       opacity: 0.7;
     }
+  }
+
+  &--open {
+    transform: translate(0);
+    box-shadow:
+      -2px 0 4px rgba(69, 79, 126, 0.02),
+      16px 0 52px rgba(14, 24, 80, 0.2);
   }
 }
