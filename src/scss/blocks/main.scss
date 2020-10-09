@@ -8,6 +8,23 @@
     padding-left: 320px;
   }
 
+  &__menu {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    box-shadow: none;
+    transform: translate(-320px);
+    transition-duration: 0.4s;
+    transition-property: transform;
+
+    &--open {
+      transform: translate(0);
+      box-shadow:
+        -2px 0 4px rgba(69, 79, 126, 0.02),
+        16px 0 52px rgba(14, 24, 80, 0.2);
+    }
+  }
+
   &__title {
     margin-top: 24px;
 
