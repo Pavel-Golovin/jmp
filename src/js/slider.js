@@ -1,3 +1,5 @@
+'use strict';
+
 const showAndHideToggle = document.querySelector('.section__show-all');
 const sectionList = document.querySelector('.swiper-wrapper');
 const swiperContainer = document.querySelector('.swiper-container');

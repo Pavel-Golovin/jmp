@@ -6,12 +6,12 @@ const overlay = document.querySelector('.overlay');
 const closeMenuButton = document.querySelector('.menu__close-btn');
 
 const openMenu = () => {
-  menuAside.classList.add('menu--open');
+  menuAside.classList.add('main__menu--open');
   overlay.classList.add('overlay--active');
 };
 
 const closeMenu = () => {
-  menuAside.classList.remove('menu--open');
+  menuAside.classList.remove('main__menu--open');
   overlay.classList.remove('overlay--active');
   document.removeEventListener('keydown', closeMenuByEsc);
 };

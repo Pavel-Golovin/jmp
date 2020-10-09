@@ -7,6 +7,7 @@
     <meta name="description" content="Мы - сервисный центр по ремонту техники, производства компании Dell.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/normalize.css"  type="text/css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="style.css" type="text/css">
   </head>
   <body class="body">
@@ -45,6 +46,32 @@
     </header>
     <main class="main">
       <div class="overlay"></div>
+
+      <section class="main__feedback modal">
+        <button class="modal__close-btn ui-button ui-button--close" type="button">
+        </button>
+        <h2 class="modal__title title title--modal">Обратная связь</h2>
+        <form class="modal__form" action="#" method="post">
+          <label>
+            <input class="modal__field-input" type="text" name="name" placeholder="Имя">
+          </label>
+          <label>
+            <input class="modal__field-input" type="tel" name="phone" placeholder="Телефон">
+          </label>
+          <label>
+            <input class="modal__field-input" type="email" name="e-mail" placeholder="Электронная почта">
+          </label>
+          <textarea class="modal__field-textarea" name="message" placeholder="Сообщение"></textarea>
+          <p class="modal__agreement">
+            Нажимая “отправить”, вы даете согласие на
+            <a href="#" class="modal__link">обработку персональных данных</a>
+            и соглашаетесь с нашей
+            <a href="#" class="modal__link">политикой конфиденциальности</a>
+          </p>
+          <button class="modal__submit-btn">Отправить</button>
+        </form>
+      </section>
+
       <aside class="main__menu menu">
         <header class="menu__header">
           <button type="button" class="menu__close-btn ui-button ui-button--close"></button>
@@ -110,7 +137,6 @@
           </ul>
         </footer>
       </aside>
-
       <h1 class="main__title title">
         Услуги и сервисы
       </h1>
@@ -154,6 +180,77 @@
           <img class="article__img" src="img/cps-big.png" alt="Логотип компании">
         </picture>
       </article>
+      <section class="section">
+        <h2 class="section__title">Ремонт техники различных брендов</h2>
+        <div class="section__content swiper-container">
+          <ul class="section__list swiper-wrapper">
+            <li class="section__item swiper-slide">
+              <a href="#" class="section__link">
+                <img src="img/lenovo.png" alt="Леново" class="section__img">
+              </a>
+            </li><li class="section__item swiper-slide">
+            <a href="#" class="section__link">
+              <img src="img/samsung.png" alt="Самсунг" class="section__img">
+            </a>
+          </li>
+            <li class="section__item swiper-slide">
+              <a href="#" class="section__link">
+                <img src="img/apple.png" alt="Эппл" class="section__img">
+              </a>
+            </li>
+            <li class="section__item swiper-slide">
+              <a href="#" class="section__link">
+                <img src="img/view-sonic.png" alt="Вью-соник" class="section__img">
+              </a>
+            </li>
+            <li class="section__item swiper-slide">
+              <a href="#" class="section__link">
+                <img src="img/bosh.png" alt="Бош" class="section__img">
+              </a>
+            </li>
+            <li class="section__item swiper-slide">
+              <a href="#" class="section__link">
+                <img src="img/hp.png" alt="эйч-пи" class="section__img">
+              </a>
+            </li>
+            <li class="section__item swiper-slide">
+              <a href="#" class="section__link">
+                <img src="img/acer.png" alt="Эйсор" class="section__img">
+              </a>
+            </li>
+            <li class="section__item swiper-slide">
+              <a href="#" class="section__link">
+                <img src="img/sony.png" alt="Сони" class="section__img">
+              </a>
+            </li>
+            <li class="section__item swiper-slide">
+              <a href="#" class="section__link">
+                <img src="img/lenovo.png" alt="Леново" class="section__img">
+              </a>
+            </li>
+            <li class="section__item swiper-slide">
+              <a href="#" class="section__link">
+                <img src="img/samsung.png" alt="Самсунг" class="section__img">
+              </a>
+            </li>
+            <li class="section__item swiper-slide">
+              <a href="#" class="section__link">
+                <img src="img/apple.png" alt="Эппл" class="section__img">
+              </a>
+            </li>
+          </ul>
+          <div class="swiper-pagination"></div>
+        </div>
+        <button type="button" class="section__show-all toggle-btn">
+          Показать всё
+        </button>
+      </section>
+
+
     </main>
+
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="js/slider.js"></script>
   </body>
 </html>
