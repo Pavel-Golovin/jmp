@@ -12,4 +12,9 @@
   &--active {
     display: block;
   }
+
+  &--active-modal {
+    display: block;
+    z-index: 3;
+  }
 }

@@ -8,13 +8,13 @@ const body = document.querySelector('.body');
 
 const openMenu = () => {
   menuAside.classList.add('main__menu--open');
-  overlay.classList.add('overlay--active');
+  overlay.classList.add('overlay--active-menu');
   body.classList.add('body--overflow-hidden');
 };
 
 const closeMenu = () => {
   menuAside.classList.remove('main__menu--open');
-  overlay.classList.remove('overlay--active');
+  overlay.classList.remove('overlay--active-menu');
   body.classList.remove('body--overflow-hidden');
   document.removeEventListener('keydown', closeMenuByEsc);
 };

@@ -8,13 +8,13 @@ const overlay = document.querySelector('.overlay');
 
 const openFeedbackPopup = () => {
   feedback.classList.add('main__feedback--open');
-  overlay.classList.add('overlay--active');
+  overlay.classList.add('overlay--active-modal');
   closeFeedbackButton.classList.remove('modal__close-btn--hidden');
 }
 
 const closeFeedbackPopup = () => {
   feedback.classList.remove('main__feedback--open');
-  overlay.classList.remove('overlay--active');
+  overlay.classList.remove('overlay--active-modal');
   closeFeedbackButton.classList.add('modal__close-btn--hidden');
 }
 
