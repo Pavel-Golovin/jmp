@@ -18,7 +18,7 @@ const closeFeedbackPopup = () => {
   closeFeedbackButton.classList.add('modal__close-btn--hidden');
 }
 
-const closeFeebackByEsc = (evt) => {
+const closeFeedbackByEsc = (evt) => {
   if (evt.key === 'Escape') {
     closeFeedbackPopup();
   }
@@ -29,7 +29,7 @@ feedbackButtons.forEach((elem) => {
     openFeedbackPopup();
     overlay.addEventListener('click', closeFeedbackPopup);
     closeFeedbackButton.addEventListener('click', closeFeedbackPopup);
-    document.addEventListener('keydown', closeFeebackByEsc);
+    document.addEventListener('keydown', closeFeedbackByEsc);
   });
 })
 
