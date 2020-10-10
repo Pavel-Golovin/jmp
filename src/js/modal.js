@@ -3,18 +3,18 @@
 const feedback = document.querySelector('.main__feedback');
 const feedbackButtons = document.querySelectorAll('.contacts-list__chat');
 const closeFeedbackButton = document.querySelector('.modal__close-btn--feedback');
-const overlay = document.querySelector('.overlay');
+const overlayFeedback = document.querySelector('.overlay-modal');
 
 
 const openFeedbackPopup = () => {
   feedback.classList.add('main__feedback--open');
-  overlay.classList.add('overlay--active-modal');
+  overlayFeedback.classList.add('overlay-modal--active');
   closeFeedbackButton.classList.remove('modal__close-btn--hidden');
 }
 
 const closeFeedbackPopup = () => {
   feedback.classList.remove('main__feedback--open');
-  overlay.classList.remove('overlay--active-modal');
+  overlayFeedback.classList.remove('overlay-modal--active');
   closeFeedbackButton.classList.add('modal__close-btn--hidden');
 }
 
@@ -27,7 +27,7 @@ const closeFeedbackByEsc = (evt) => {
 feedbackButtons.forEach((elem) => {
   elem.addEventListener('click', () => {
     openFeedbackPopup();
-    overlay.addEventListener('click', closeFeedbackPopup);
+    overlayFeedback.addEventListener('click', closeFeedbackPopup);
     closeFeedbackButton.addEventListener('click', closeFeedbackPopup);
     document.addEventListener('keydown', closeFeedbackByEsc);
   });
