@@ -20,7 +20,8 @@ const closeMenu = () => {
 };
 
 const closeMenuByEsc = (evt) => {
-  if (evt.key === 'Escape') {
+  const [feedbackModal, callModal] = document.querySelectorAll('.modal');
+  if ((evt.key === 'Escape') && !(feedbackModal.classList.contains('main__feedback--open') || callModal.classList.contains('main__call--open'))) {
     closeMenu();
   }
 };
