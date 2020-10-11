@@ -1,5 +1,7 @@
 'use strict';
 
+const overlayModal = document.querySelector(`.overlay--modal`);
+
 const feedback = {
   elementCaption: `main__feedback`,
   get element() {
@@ -26,8 +28,6 @@ const call = {
   }
 };
 
-const overlayModal = document.querySelector(`.overlay--modal`);
-
 const openModal = (modal) => {
   modal.element.classList.add(`${modal.elementCaption}--open`);
   overlayModal.classList.add(`overlay--active`);
@@ -44,31 +44,26 @@ const closeModal = (modal) => {
   };
 };
 
-const closeFeedbackHandler = closeModal(feedback);
-const closeCallHandler = closeModal(call);
-
 const closeModalByEscHandler = (evt) => {
   const [feedbackModal, callModal] = document.querySelectorAll('.modal');
   if (evt.key === 'Escape' && feedbackModal.classList.contains(`main__feedback--open`)) {
-    closeFeedbackHandler();
+    closeModal(feedback)();
   }
   if (evt.key === 'Escape' && callModal.classList.contains(`main__call--open`)) {
-    closeCallHandler();
+    closeModal(call)();
   }
 };
 
-feedback.openButtons.forEach((elem) => {
-  elem.addEventListener('click', () => {
-    openModal(feedback);
-    overlayModal.addEventListener('click', closeFeedbackHandler);
-    feedback.closeButton.addEventListener('click', closeFeedbackHandler);
+const setModalHandlers = (modal) => {
+  const closeModalHandler = closeModal(modal);
+  modal.openButtons.forEach((elem) => {
+    elem.addEventListener(`click`, () => {
+      openModal(modal);
+      overlayModal.addEventListener(`click`, closeModalHandler);
+      modal.closeButton.addEventListener(`click`, closeModalHandler);
+    });
   });
-});
+};
 
-call.openButtons.forEach((elem) => {
-  elem.addEventListener('click', () => {
-    openModal(call);
-    overlayModal.addEventListener('click', closeCallHandler);
-    call.closeButton.addEventListener('click', closeCallHandler);
-  });
-});
+setModalHandlers(feedback);
+setModalHandlers(call);
