@@ -1,18 +1,47 @@
 'use strict';
 
-const showAndHideToggle = document.querySelector('.section__show-all');
-const sectionList = document.querySelector('.swiper-wrapper');
-const swiperContainer = document.querySelector('.swiper-container');
+const showAndHideToggles = document.querySelectorAll('.section__show-all');
+const sectionContents = document.querySelectorAll('.section__content');
+
+const brandsList = document.querySelector('.section__list--brands');
+const brandsContainer = document.querySelector('.section__content--brands');
+
+const devicesList = document.querySelector('.section__list--devices');
+const devicesContainer = document.querySelector('.section__content--devices');
+
+
+const [toggleBrands, toggleDevices] = showAndHideToggles;
 
 let isMobile =  document.documentElement.clientWidth < 768;
 
-showAndHideToggle.addEventListener('click', function() {
+showAndHideToggles.forEach((elem, i) => {
+  elem.addEventListener('click', function() {
     this.innerText = (this.innerText === 'Показать всё') ? 'Скрыть' : 'Показать всё';
     this.classList.toggle('toggle-btn--reversed');
-    swiperContainer.classList.toggle('section__content--all');
+    sectionContents[i].classList.toggle('section__content--all');
+  });
 });
 
-let mySwiper = new Swiper (swiperContainer, {
+let brandsSwiper = new Swiper (brandsContainer, {
+  init: false,
+  slidesPerView: 1.2,
+  spaceBetween: 16,
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+  breakpoints: {
+    440: {
+      slidesPerView: 2,
+      spaceBetween: 10,
+    },
+    660: {
+      slidesPerView: 3
+    }
+  }
+});
+
+let devicesSwiper = new Swiper (devicesContainer, {
   init: false,
   slidesPerView: 1.2,
   spaceBetween: 16,
@@ -32,8 +61,13 @@ let mySwiper = new Swiper (swiperContainer, {
 });
 
 if (isMobile) {
-  mySwiper.init();
-  swiperContainer.style.height = "100px";
-  showAndHideToggle.style.display = "none";
-    sectionList.style.flexWrap = "nowrap";
+  brandsSwiper.init();
+  brandsContainer.style.height = "100px";
+  toggleBrands.style.display = "none";
+  brandsList.style.flexWrap = "nowrap";
+
+  devicesSwiper.init();
+  devicesContainer.style.height = "188px";
+  toggleDevices.style.display = "none";
+  devicesList.style.flexWrap = "nowrap";
 }

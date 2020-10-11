@@ -9,6 +9,7 @@
     letter-spacing: -0.2px;
     padding: 16px 16px;
     background: linear-gradient(to right, #F8F8F8 50%, #FFFFFF 100%);
+    border-top: 1px solid #D9FFF5;
   }
 
   &__list {
@@ -21,6 +22,10 @@
     height: 72px;
     margin-right: 24px;
     margin-bottom: 16px;
+
+    &--device {
+      height: 160px;
+    }
   }
 
   &__link {
@@ -36,16 +41,30 @@
     border-radius: 6px;
     height: 72px;
     padding-left: 16px;
+
+    &--device {
+      height: 160px;
+      align-items: flex-start;
+      padding-top: 16px;
+    }
+  }
+
+  &__text {
+    &--device {
+      color: #1B1C21;
+    }
   }
 
   &__show-all {
     margin-left: 32px;
-    margin-top: 8px;
+    margin-top: 20px;
   }
+
   &__content {
     padding-left: 16px;
     margin-top: 16px;
     height: 160px;
+
     &--all {
       height: auto;
     }
