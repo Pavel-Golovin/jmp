@@ -31,7 +31,8 @@ const overlayModal = document.querySelector(`.overlay--modal`);
 const openModal = (modal) => {
   modal.element.classList.add(`${modal.elementCaption}--open`);
   overlayModal.classList.add(`overlay--active`);
-  modal.closeButton.classList.remove(`modal__close-btn--hidden`)
+  modal.closeButton.classList.remove(`modal__close-btn--hidden`);
+  document.addEventListener('keydown', closeModalByEscHandler);
 }
 
 const closeModal = (modal) => {
@@ -39,22 +40,19 @@ const closeModal = (modal) => {
     modal.element.classList.remove(`${modal.elementCaption}--open`);
     overlayModal.classList.remove(`overlay--active`);
     modal.closeButton.classList.add('modal__close-btn--hidden');
-    document.removeEventListener(`keydown`, closeFeedbackByEsc);
-    document.removeEventListener(`keydown`, closeCallByEsc);
+    document.removeEventListener(`keydown`, closeModalByEscHandler);
   };
 };
 
 const closeFeedbackHandler = closeModal(feedback);
 const closeCallHandler = closeModal(call);
 
-const closeFeedbackByEsc = (evt) => {
-  if (evt.key === 'Escape') {
+const closeModalByEscHandler = (evt) => {
+  const [feedbackModal, callModal] = document.querySelectorAll('.modal');
+  if (evt.key === 'Escape' && feedbackModal.classList.contains(`main__feedback--open`)) {
     closeFeedbackHandler();
   }
-};
-
-const closeCallByEsc = (evt) => {
-  if (evt.key === 'Escape') {
+  if (evt.key === 'Escape' && callModal.classList.contains(`main__call--open`)) {
     closeCallHandler();
   }
 };
@@ -64,7 +62,6 @@ feedback.openButtons.forEach((elem) => {
     openModal(feedback);
     overlayModal.addEventListener('click', closeFeedbackHandler);
     feedback.closeButton.addEventListener('click', closeFeedbackHandler);
-    document.addEventListener('keydown', closeFeedbackByEsc);
   });
 });
 
@@ -73,6 +70,5 @@ call.openButtons.forEach((elem) => {
     openModal(call);
     overlayModal.addEventListener('click', closeCallHandler);
     call.closeButton.addEventListener('click', closeCallHandler);
-    document.addEventListener('keydown', closeCallByEsc);
   });
 });
