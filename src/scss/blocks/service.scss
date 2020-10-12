@@ -1,0 +1,49 @@
+.service {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #FFFFFF;
+  height: 164px;
+  border-radius: 6px;
+  padding: 16px 16px 20px;
+
+  @media screen and (min-width: 768px) {
+
+  }
+
+  &__name {
+
+  }
+
+  &__price {
+
+  }
+
+  &__term {
+
+  }
+
+  &__caption {
+    color: #7E7E82;
+    opacity: 0.72;
+    font-size: 14px;
+    line-height: 16px;
+
+    &--hidden {
+      display: none;
+    }
+  }
+
+  &__description {
+    color: #1B1C21;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.2px;
+  }
+
+  &__order-btn {
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+  }
+}

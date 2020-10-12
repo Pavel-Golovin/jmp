@@ -26,6 +26,17 @@
     &--device {
       height: 160px;
     }
+
+    &--service {
+      height: 200px;
+      margin-bottom: 0;
+
+
+    }
+  }
+
+  &__service {
+    position: relative;
   }
 
   &__link {
@@ -66,8 +77,10 @@
     margin-top: 16px;
     height: 160px;
 
-    &--all {
+    &--all,
+    &--services {
       height: auto;
     }
+
   }
 }
