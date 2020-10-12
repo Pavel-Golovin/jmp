@@ -9,6 +9,8 @@ const brandsContainer = document.querySelector('.section__content--brands');
 const devicesList = document.querySelector('.section__list--devices');
 const devicesContainer = document.querySelector('.section__content--devices');
 
+const servicesList = document.querySelector('.section__list--services');
+const servicesContainer = document.querySelector('.section__content--services')
 
 const [toggleBrands, toggleDevices] = showAndHideToggles;
 
@@ -60,6 +62,25 @@ let devicesSwiper = new Swiper (devicesContainer, {
   }
 });
 
+let servicesSwiper = new Swiper (servicesContainer, {
+  init: false,
+  slidesPerView: 1.2,
+  spaceBetween: 16,
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+  breakpoints: {
+    440: {
+      slidesPerView: 2,
+      spaceBetween: 10,
+    },
+    660: {
+      slidesPerView: 3
+    }
+  }
+});
+
 if (isMobile) {
   brandsSwiper.init();
   brandsContainer.style.height = "100px";
@@ -70,4 +91,9 @@ if (isMobile) {
   devicesContainer.style.height = "188px";
   toggleDevices.style.display = "none";
   devicesList.style.flexWrap = "nowrap";
+
+  servicesSwiper.init();
+  servicesContainer.style.height = "228px";
+  servicesList.style.flexWrap = "nowrap";
 }
+
