@@ -1,99 +1,83 @@
 'use strict';
 
-const showAndHideToggles = document.querySelectorAll('.section__show-all');
-const sectionContents = document.querySelectorAll('.section__content');
-
-const brandsList = document.querySelector('.section__list--brands');
 const brandsContainer = document.querySelector('.section__content--brands');
-
-const devicesList = document.querySelector('.section__list--devices');
 const devicesContainer = document.querySelector('.section__content--devices');
+const servicesContainer = document.querySelector('.section__content--services');
+let brandsSwiper;
+let devicesSwiper;
+let servicesSwiper;
+let isSwiper = false;
 
-const servicesList = document.querySelector('.section__list--services');
-const servicesContainer = document.querySelector('.section__content--services')
-
-const [toggleBrands, toggleDevices] = showAndHideToggles;
-
-let isMobile =  document.documentElement.clientWidth < 768;
-
-showAndHideToggles.forEach((elem, i) => {
-  elem.addEventListener('click', function() {
-    this.innerText = (this.innerText === 'Показать всё') ? 'Скрыть' : 'Показать всё';
-    this.classList.toggle('toggle-btn--reversed');
-    sectionContents[i].classList.toggle('section__content--all');
-  });
-});
-
-let brandsSwiper = new Swiper (brandsContainer, {
-  init: false,
-  slidesPerView: 1.2,
-  spaceBetween: 16,
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-  },
-  breakpoints: {
-    440: {
-      slidesPerView: 2,
-      spaceBetween: 10,
-    },
-    660: {
-      slidesPerView: 3
+const initSwiper = () => {
+  if (document.documentElement.clientWidth < 768) {
+    if (isSwiper) {
+      return false
     }
-  }
-});
 
-let devicesSwiper = new Swiper (devicesContainer, {
-  init: false,
-  slidesPerView: 1.2,
-  spaceBetween: 16,
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-  },
-  breakpoints: {
-    440: {
-      slidesPerView: 2,
-      spaceBetween: 10,
-    },
-    660: {
-      slidesPerView: 3
+    brandsSwiper = new Swiper(brandsContainer, {
+      slidesPerView: 1.2,
+      spaceBetween: 16,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      breakpoints: {
+        440: {
+          slidesPerView: 2,
+          spaceBetween: 10,
+        },
+        660: {
+          slidesPerView: 3
+        }
+      }
+    });
+
+    devicesSwiper = new Swiper(devicesContainer, {
+      slidesPerView: 1.2,
+      spaceBetween: 16,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      breakpoints: {
+        440: {
+          slidesPerView: 2,
+          spaceBetween: 10,
+        },
+        660: {
+          slidesPerView: 3
+        }
+      }
+    });
+
+    servicesSwiper = new Swiper(servicesContainer, {
+      slidesPerView: 1.2,
+      spaceBetween: 16,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      breakpoints: {
+        440: {
+          slidesPerView: 2,
+          spaceBetween: 10,
+        },
+        660: {
+          slidesPerView: 3
+        }
+      }
+    });
+    isSwiper = true;
+  } else {
+    if (!isSwiper) {
+      return false;
     }
+    brandsSwiper.destroy(true, true);
+    devicesSwiper.destroy(true, true);
+    servicesSwiper.destroy(true, true);
+    isSwiper = false;
   }
-});
-
-let servicesSwiper = new Swiper (servicesContainer, {
-  init: false,
-  slidesPerView: 1.2,
-  spaceBetween: 16,
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-  },
-  breakpoints: {
-    440: {
-      slidesPerView: 2,
-      spaceBetween: 10,
-    },
-    660: {
-      slidesPerView: 3
-    }
-  }
-});
-
-if (isMobile) {
-  brandsSwiper.init();
-  brandsContainer.style.height = "100px";
-  toggleBrands.style.display = "none";
-  brandsList.style.flexWrap = "nowrap";
-
-  devicesSwiper.init();
-  devicesContainer.style.height = "188px";
-  toggleDevices.style.display = "none";
-  devicesList.style.flexWrap = "nowrap";
-
-  servicesSwiper.init();
-  servicesContainer.style.height = "228px";
-  servicesList.style.flexWrap = "nowrap";
 }
 
+window.onload = initSwiper;
+window.onresize = initSwiper;

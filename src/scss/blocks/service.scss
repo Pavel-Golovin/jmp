@@ -2,25 +2,27 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  box-sizing: border-box;
   background-color: #FFFFFF;
   height: 164px;
   border-radius: 6px;
   padding: 16px 16px 20px;
 
   @media screen and (min-width: 768px) {
-
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 2fr 1fr 1.5fr;
+    height: auto;
+    width: 100%;
+    padding: 16px;
   }
 
-  &__name {
-
-  }
-
-  &__price {
-
-  }
-
+  &__name,
+  &__price,
   &__term {
-
+    @media screen and (min-width: 768px) {
+      padding-top: 5px;
+    }
   }
 
   &__caption {
@@ -29,7 +31,7 @@
     font-size: 14px;
     line-height: 16px;
 
-    &--hidden {
+    @media screen and (min-width: 768px) {
       display: none;
     }
   }
@@ -39,11 +41,19 @@
     font-size: 14px;
     line-height: 18px;
     letter-spacing: 0.2px;
+
+    vertical-align: middle;
   }
 
   &__order-btn {
     position: absolute;
     bottom: 16px;
     right: 16px;
+
+    @media screen and (min-width: 768px) {
+      position: relative;
+      bottom: 0;
+      right: 0;
+    }
   }
 }

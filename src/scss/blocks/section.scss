@@ -14,7 +14,14 @@
 
   &__list {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+
+    @media screen and (min-width: 768px) {
+      flex-direction: column;
+      flex-wrap: wrap;
+      height: 325px;
+    }
+
   }
 
   &__item {
@@ -29,9 +36,12 @@
 
     &--service {
       height: 200px;
-      margin-bottom: 0;
+      margin-bottom: 1px;
 
-
+      @media screen and (min-width: 768px) {
+        height: 64px;
+        width: auto;
+      }
     }
   }
 
@@ -70,17 +80,41 @@
     margin-left: 32px;
     margin-top: 20px;
     margin-bottom: 32px;
+    display: none;
+
+    @media screen and (min-width: 768px) {
+      display: block;
+    }
   }
 
   &__content {
     padding-left: 16px;
-    margin-top: 16px;
+    margin-top: 0;
     height: 160px;
 
-    &--all,
-    &--services {
-      height: auto;
+    &--brands {
+      height: 100px;
+      @media screen and (min-width: 768px) {
+        height: 160px;
+      }
     }
 
+    &--devices {
+      height: 188px;
+      @media screen and (min-width: 768px) {
+        height: 160px;
+      }
+    }
+
+    &--services {
+      height: 230px;
+      @media screen and (min-width: 768px) {
+        height: 324px;
+      }
+    }
+
+    &--all {
+      height: auto;
+    }
   }
 }
