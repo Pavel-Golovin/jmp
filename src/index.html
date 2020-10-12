@@ -70,7 +70,7 @@
             и соглашаетесь с нашей
             <a href="#" class="modal__link">политикой конфиденциальности</a>
           </p>
-          <button class="modal__submit-btn">Отправить</button>
+          <button class="modal__submit-btn request-btn request-btn--submit">Отправить</button>
         </form>
       </section>
       <section class="main__call modal">
@@ -87,7 +87,7 @@
             и соглашаетесь с нашей
             <a href="#" class="modal__link">политикой конфиденциальности</a>
           </p>
-          <button class="modal__submit-btn">Отправить</button>
+          <button class="modal__submit-btn request-btn request-btn--submit">Отправить</button>
         </form>
       </section>
       <aside class="main__menu menu">
@@ -313,110 +313,120 @@
         <h2 class="section__title">Цена на услуги</h2>
         <div class="section__content swiper-container section__content--services">
           <ul class="section__list swiper-wrapper section__list--services">
-            <li class="section__item swiper-slide service">
-              <div class="service__name">
-                <span class="service__caption">Ремонтные услуги</span>
-                <p class="service__description">
-                  Диагностика
-                </p>
+            <li class="section__item swiper-slide section__item--service">
+              <div class="section__service service">
+                <div class="service__name">
+                  <span class="service__caption">Ремонтные услуги</span>
+                  <p class="service__description">
+                    Диагностика
+                  </p>
+                </div>
+                <div class="service__price">
+                  <span class="service__caption">Цена</span>
+                  <p class="service__description">
+                    Бесплатно
+                  </p>
+                </div>
+                <div class="service__term">
+                  <span class="service__caption">Срок</span>
+                  <p class="service__description">
+                    30 мин
+                  </p>
+                </div>
+                <button class="service__order-btn request-btn request-btn--order">Заказать</button>
               </div>
-              <div class="service__price">
-                <span class="service__caption">Цена</span>
-                <p class="service__description">
-                  Бесплатно
-                </p>
-              </div>
-              <div class="service__term">
-                <span class="service__caption">Срок</span>
-                <p class="service__description">
-                  30 мин
-                </p>
-              </div>
-              <button class="service__order">Заказать</button>
             </li>
-            <li class="section__item swiper-slide section__item--price">
-              <div class="service__name">
-                <span class="service__caption">Ремонтные услуги</span>
-                <p class="service__description">
-                  Замена дисплея
-                </p>
+            <li class="section__item swiper-slide section__item--service">
+              <div class="section__service service">
+                <div class="service__name">
+                  <span class="service__caption">Ремонтные услуги</span>
+                  <p class="service__description">
+                    Замена дисплея
+                  </p>
+                </div>
+                <div class="service__price">
+                  <span class="service__caption">Цена</span>
+                  <p class="service__description">
+                    1 000 &#8381;
+                  </p>
+                </div>
+                <div class="service__term">
+                  <span class="service__caption">Срок</span>
+                  <p class="service__description">
+                    30-120 мин
+                  </p>
+                </div>
+                <button class="service__order-btn request-btn request-btn--order">Заказать</button>
               </div>
-              <div class="service__price">
-                <span class="service__caption">Цена</span>
-                <p class="service__description">
-                  1 000 &#8381;
-                </p>
-              </div>
-              <div class="service__term">
-                <span class="service__caption">Срок</span>
-                <p class="service__description">
-                  30-120 мин
-                </p>
-              </div>
-              <button class="service__order">Заказать</button>
             </li>
-            <li class="section__item swiper-slide section__item--price">
-              <div class="service__name">
-                <span class="service__caption">Ремонтные услуги</span>
-                <p class="service__description">
-                  Замена полифонического динамика
-                </p>
+            <li class="section__item swiper-slide section__item--service">
+              <div class="section__service service">
+                <div class="service__name">
+                  <span class="service__caption">Ремонтные услуги</span>
+                  <p class="service__description">
+                    Замена полифонического динамика
+                  </p>
+                </div>
+                <div class="service__price">
+                  <span class="service__caption">Цена</span>
+                  <p class="service__description">
+                    1 000 &#8381;
+                  </p>
+                </div>
+                <div class="service__term">
+                  <span class="service__caption">Срок</span>
+                  <p class="service__description">
+                    30-120 мин
+                  </p>
+                </div>
+                <button class="service__order-btn request-btn request-btn--order">Заказать</button>
               </div>
-              <div class="service__price">
-                <span class="service__caption">Цена</span>
-                <p class="service__description">
-                  1 000 &#8381;
-                </p>
-              </div>
-              <div class="service__term">
-                <span class="service__caption">Срок</span>
-                <p class="service__description">
-                  30-120 мин
-                </p>
-              </div>
-              <button class="service__order"></button>
             </li>
-            <li class="section__item swiper-slide section__item--price">
-              <div class="service__name">
-                <span class="service__caption">Ремонтные услуги</span>
-                <p class="service__description">
-                  Тестирование с выдачей технического заключения
-                </p>
+            <li class="section__item swiper-slide section__item--service">
+              <div class="section__service service">
+                <div class="service__name">
+                  <span class="service__caption">Ремонтные услуги</span>
+                  <p class="service__description">
+                    Тестирование с выдачей технического заключения
+                  </p>
+                </div>
+                <div class="service__price">
+                  <span class="service__caption">Цена</span>
+                  <p class="service__description">
+                    1 000 &#8381;
+                  </p>
+                </div>
+                <div class="service__term">
+                  <span class="service__caption">Срок</span>
+                  <p class="service__description">
+                    30-120 мин
+                  </p>
+                </div>
+                <button class="service__order-btn request-btn request-btn--order">Заказать</button>
               </div>
-              <div class="service__price">
-                <span class="service__caption">Цена</span>
-                <p class="service__description">
-                  1 000 &#8381;
-                </p>
-              </div>
-              <div class="service__term">
-                <span class="service__caption">Срок</span>
-                <p class="service__description">
-                  30-120 мин
-                </p>
-              </div>
-              <button class="service__order"></button>
             </li>
-            <li class="section__item swiper-slide section__item--price">
-              <div class="service__name">
-                <span class="service__caption">Ремонтные услуги</span>
-                <p class="service__description">
-                  Замена программного обеспечения
-                </p>
+            <li class="section__item swiper-slide section__item--service">
+              <div class="section__service service">
+                <div class="service__name">
+                  <span class="service__caption">Ремонтные услуги</span>
+                  <p class="service__description">
+                    Замена программного обеспечения
+                  </p>
+                </div>
+                <div class="service__price">
+                  <span class="service__caption">Цена</span>
+                  <p class="service__description">
+                    1 000 &#8381;
+                  </p>
+                </div>
+                <div class="service__term">
+                  <span class="service__caption">Срок</span>
+                  <p class="service__description">
+                    30-120 мин
+                  </p>
+                </div>
+                <button class="service__order-btn request-btn request-btn--order">Заказать</button>
               </div>
-              <div class="service__price">
-                <span class="service__caption">Цена</span>
-                <p class="service__description">
-                  1 000 &#8381;
-                </p>
-              </div>
-              <div class="service__term">
-                <span class="service__caption">Срок</span>
-                <p class="service__description">
-                  30-120 мин
-                </p>
-              </div>
-              <button class="service__order"></button>
             </li>
           </ul>
           <div class="swiper-pagination"></div>
