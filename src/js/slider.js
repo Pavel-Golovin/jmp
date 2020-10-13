@@ -3,11 +3,6 @@
 const brandsContainer = document.querySelector(`.section__content--brands`);
 const devicesContainer = document.querySelector(`.section__content--devices`);
 const servicesContainer = document.querySelector(`.section__content--services`);
-let brandsSwiper;
-let devicesSwiper;
-let servicesSwiper;
-let isSwiper = false;
-
 const parametersOfSlider = {
   slidesPerView: 1.2,
   spaceBetween: 16,
@@ -25,6 +20,11 @@ const parametersOfSlider = {
     }
   }
 }
+
+let brandsSwiper;
+let devicesSwiper;
+let servicesSwiper;
+let isSwiper = false;
 
 const initSwiper = () => {
   if (document.documentElement.clientWidth < 768) {
