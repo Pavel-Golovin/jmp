@@ -17,10 +17,13 @@
     flex-wrap: nowrap;
 
     @media screen and (min-width: 768px) {
-      flex-direction: column;
       flex-wrap: wrap;
     }
 
+    &--services {
+      flex-direction: column;
+      flex-wrap: wrap;
+    }
   }
 
   &__item {
@@ -124,6 +127,7 @@
 
     &--all {
       height: auto;
+      flex-wrap: wrap;
     }
   }
 
