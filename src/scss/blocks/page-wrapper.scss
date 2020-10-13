@@ -1,0 +1,14 @@
+.page-wrapper {
+  position: relative;
+  background-color: #f8f8f8;
+
+  @media screen and (min-width: 1320px) {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    width: 1320px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+}
