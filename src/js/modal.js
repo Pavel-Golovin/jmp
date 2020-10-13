@@ -3,7 +3,7 @@
 const overlayModal = document.querySelector(`.overlay--modal`);
 
 const feedback = {
-  elementCaption: `main__feedback`,
+  elementCaption: `main__modal--feedback`,
   get element() {
     return document.querySelector(`.${this.elementCaption}`);
   },
@@ -16,7 +16,7 @@ const feedback = {
 };
 
 const call = {
-  elementCaption: `main__call`,
+  elementCaption: `main__modal--call`,
   get element() {
     return document.querySelector(`.${this.elementCaption}`);
   },
@@ -29,7 +29,7 @@ const call = {
 };
 
 const openModal = (modal) => {
-  modal.element.classList.add(`${modal.elementCaption}--open`);
+  modal.element.classList.add(`main__modal--open`);
   overlayModal.classList.add(`overlay--active`);
   modal.closeButton.classList.remove(`modal__close-btn--hidden`);
   document.addEventListener('keydown', closeModalByEscHandler);
@@ -37,7 +37,7 @@ const openModal = (modal) => {
 
 const closeModal = (modal) => {
   return () => {
-    modal.element.classList.remove(`${modal.elementCaption}--open`);
+    modal.element.classList.remove(`main__modal--open`);
     overlayModal.classList.remove(`overlay--active`);
     modal.closeButton.classList.add('modal__close-btn--hidden');
     document.removeEventListener(`keydown`, closeModalByEscHandler);
@@ -46,10 +46,10 @@ const closeModal = (modal) => {
 
 const closeModalByEscHandler = (evt) => {
   const [feedbackModal, callModal] = document.querySelectorAll('.modal');
-  if (evt.key === 'Escape' && feedbackModal.classList.contains(`main__feedback--open`)) {
+  if (evt.key === 'Escape' && feedbackModal.classList.contains(`main__modal--open`)) {
     closeModal(feedback)();
   }
-  if (evt.key === 'Escape' && callModal.classList.contains(`main__call--open`)) {
+  if (evt.key === 'Escape' && callModal.classList.contains(`main__modal--open`)) {
     closeModal(call)();
   }
 };
