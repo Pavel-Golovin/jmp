@@ -19,19 +19,28 @@
     @media screen and (min-width: 768px) {
       flex-direction: column;
       flex-wrap: wrap;
-      height: 325px;
     }
 
   }
 
   &__item {
     width: 224px;
-    height: 72px;
+    height: 64px;
     margin-right: 24px;
     margin-bottom: 16px;
 
     &--device {
       height: 160px;
+    }
+
+    &--caption {
+      display: none;
+
+      @media screen and (min-width: 768px) {
+        display: block;
+        width: auto;
+        margin-bottom: 0;
+      }
     }
 
     &--service {
@@ -109,7 +118,7 @@
     &--services {
       height: 230px;
       @media screen and (min-width: 768px) {
-        height: 324px;
+        height: 398px;
       }
     }
 

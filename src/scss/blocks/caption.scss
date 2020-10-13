@@ -1,0 +1,16 @@
+.caption {
+  display: grid;
+  box-sizing: border-box;
+  grid-auto-flow: column;
+  grid-template-columns: 2fr 1fr 1.5fr;
+  height: 64px;
+  width: 100%;
+  padding: 30px 16px 16px;
+
+  &__cln-name {
+    color: #7E7E82;
+    font-size: 14px;
+    line-height: 16px;
+    opacity: 0.72;
+  }
+}

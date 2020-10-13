@@ -4,7 +4,7 @@
   justify-content: space-between;
   box-sizing: border-box;
   background-color: #FFFFFF;
-  height: 164px;
+  height: 200px;
   border-radius: 6px;
   padding: 16px 16px 20px;
 
@@ -12,9 +12,9 @@
     display: grid;
     grid-auto-flow: column;
     grid-template-columns: 2fr 1fr 1.5fr;
-    height: auto;
     width: 100%;
     padding: 16px;
+    height: 64px;
   }
 
   &__name,
@@ -49,11 +49,5 @@
     position: absolute;
     bottom: 16px;
     right: 16px;
-
-    @media screen and (min-width: 768px) {
-      position: relative;
-      bottom: 0;
-      right: 0;
-    }
   }
 }
