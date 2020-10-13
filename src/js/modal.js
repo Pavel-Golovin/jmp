@@ -1,6 +1,7 @@
 'use strict';
 
 const overlayModal = document.querySelector(`.overlay--modal`);
+const body = document.querySelector('.body');
 
 const feedback = {
   elementCaption: `main__modal--feedback`,
@@ -31,6 +32,7 @@ const call = {
 const openModal = (modal) => {
   modal.element.classList.add(`main__modal--open`);
   overlayModal.classList.add(`overlay--active`);
+  body.classList.add('body--overflow-hidden');
   modal.closeButton.classList.remove(`modal__close-btn--hidden`);
   document.addEventListener('keydown', closeModalByEscHandler);
 }
@@ -39,6 +41,7 @@ const closeModal = (modal) => {
   return () => {
     modal.element.classList.remove(`main__modal--open`);
     overlayModal.classList.remove(`overlay--active`);
+    body.classList.remove('body--overflow-hidden');
     modal.closeButton.classList.add('modal__close-btn--hidden');
     document.removeEventListener(`keydown`, closeModalByEscHandler);
   };
