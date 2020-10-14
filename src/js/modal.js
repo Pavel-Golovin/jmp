@@ -29,44 +29,109 @@ const call = {
   }
 };
 
+const setFeedbackOpenHandlers = () => {
+  feedback.openButtons.forEach((openFeedbackBtn) => {
+    openFeedbackBtn.addEventListener(`click`, openFeedbackBtnClickHandler);
+  });
+};
+
+const setCallOpenHandlers = () => {
+  call.openButtons.forEach((openCallBtn) => {
+    openCallBtn.addEventListener(`click`, openCallBtnClickHandler);
+  });
+};
+
+const resetFeedbackOpenHandlers = () => {
+  feedback.openButtons.forEach((openFeedbackBtn) => {
+    openFeedbackBtn.removeEventListener(`click`, openFeedbackBtnClickHandler);
+  });
+};
+
+const resetCallOpenHandlers = () => {
+  call.openButtons.forEach((openCallBtn) => {
+    openCallBtn.removeEventListener(`click`, openCallBtnClickHandler);
+  });
+};
+
 const openModal = (modal) => {
   modal.element.classList.add(`main__modal--open`);
   overlayModal.classList.add(`overlay--active`);
   body.classList.add('body--overflow-hidden');
   modal.closeButton.classList.remove(`modal__close-btn--hidden`);
+
+  overlayModal.addEventListener(`click`, overlayModalClickHandler);
+  modal.closeButton.addEventListener(`click`, modalCloseButtonClickHandler);
   document.addEventListener('keydown', closeModalByEscHandler);
+  console.log(modal.elementCaption);
+  if (modal.elementCaption === feedback.elementCaption) {
+    resetFeedbackOpenHandlers();
+  }
+  if (modal.elementCaption === call.elementCaption) {
+    resetCallOpenHandlers();
+  }
 }
 
 const closeModal = (modal) => {
-  return () => {
-    modal.element.classList.remove(`main__modal--open`);
-    overlayModal.classList.remove(`overlay--active`);
-    body.classList.remove('body--overflow-hidden');
-    modal.closeButton.classList.add('modal__close-btn--hidden');
-    document.removeEventListener(`keydown`, closeModalByEscHandler);
-  };
+  modal.element.classList.remove(`main__modal--open`);
+  overlayModal.classList.remove(`overlay--active`);
+  body.classList.remove('body--overflow-hidden');
+  modal.closeButton.classList.add('modal__close-btn--hidden');
+
+  overlayModal.removeEventListener(`click`, overlayModalClickHandler);
+  modal.closeButton.removeEventListener(`click`, modalCloseButtonClickHandler);
+  document.removeEventListener(`keydown`, closeModalByEscHandler);
+  if (modal.elementCaption === feedback.elementCaption) {
+    setFeedbackOpenHandlers();
+  }
+  if (modal.elementCaption === call.elementCaption) {
+    setCallOpenHandlers();
+  }
 };
+
+const isFeedbackOpen = () => {
+  const feedbackModal = feedback.element;
+  return feedbackModal.classList.contains(`main__modal--open`);
+};
+
+const isCallOpen = () => {
+  const callModal = call.element;
+  return callModal.classList.contains(`main__modal--open`);
+}
 
 const closeModalByEscHandler = (evt) => {
-  const [feedbackModal, callModal] = document.querySelectorAll('.modal');
-  if (evt.key === 'Escape' && feedbackModal.classList.contains(`main__modal--open`)) {
-    closeModal(feedback)();
+  if (evt.key === 'Escape' && isFeedbackOpen()) {
+    closeModal(feedback);
   }
-  if (evt.key === 'Escape' && callModal.classList.contains(`main__modal--open`)) {
-    closeModal(call)();
+  if (evt.key === 'Escape' && isCallOpen()) {
+    closeModal(call);
   }
 };
 
-const setModalHandlers = (modal) => {
-  const closeModalHandler = closeModal(modal);
-  modal.openButtons.forEach((elem) => {
-    elem.addEventListener(`click`, () => {
-      openModal(modal);
-      overlayModal.addEventListener(`click`, closeModalHandler);
-      modal.closeButton.addEventListener(`click`, closeModalHandler);
-    });
-  });
+const overlayModalClickHandler = () => {
+  if (isFeedbackOpen()) {
+    closeModal(feedback);
+  }
+  if (isCallOpen()) {
+    closeModal(call);
+  }
 };
 
-setModalHandlers(feedback);
-setModalHandlers(call);
+const modalCloseButtonClickHandler = () => {
+  if (isFeedbackOpen()) {
+    closeModal(feedback);
+  }
+  if (isCallOpen()) {
+    closeModal(call);
+  }
+}
+
+const openFeedbackBtnClickHandler = () => {
+  openModal(feedback);
+};
+
+const openCallBtnClickHandler = () => {
+  openModal(call);
+}
+
+setFeedbackOpenHandlers();
+setCallOpenHandlers();
