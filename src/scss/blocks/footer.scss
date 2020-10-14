@@ -31,10 +31,18 @@
     }
 
     &--copyright {
+      width: 240px;
       @media screen and (min-width: 768px) {
         width: 258px;
         text-align: start;
       }
+    }
+
+    &--developers {
+      display: block;
+      font-family: "TT Lakes Regular", sans-serif;
+      line-height: 16px;
+      font-size: 14px;
     }
 
     &--privacy {
