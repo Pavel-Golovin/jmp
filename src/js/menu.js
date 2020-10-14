@@ -5,30 +5,47 @@ const menuAside = document.querySelector('.main__menu');
 const overlayMenu = document.querySelector('.overlay--menu');
 const closeMenuButton = document.querySelector('.menu__close-btn');
 const body = document.querySelector('.body');
+const feedbackModal = document.querySelector('.main__modal--feedback');
+const callModal = document.querySelector('.main__modal--call');
 
 const openMenu = () => {
   menuAside.classList.add('main__menu--open');
   overlayMenu.classList.add('overlay--active');
   body.classList.add('body--overflow-hidden');
+
+  overlayMenu.addEventListener('click', overlayMenuClickHandler);
+  closeMenuButton.addEventListener('click', closeMenuButtonClickHandler);
+  document.addEventListener('keydown', escapeKeyDownHandler);
+  openMenuButton.removeEventListener('click', openMenuButtonClickHandler);
 };
 
 const closeMenu = () => {
   menuAside.classList.remove('main__menu--open');
   overlayMenu.classList.remove('overlay--active');
   body.classList.remove('body--overflow-hidden');
-  document.removeEventListener('keydown', closeMenuByEsc);
+
+  overlayMenu.removeEventListener('click', overlayMenuClickHandler);
+  closeMenuButton.removeEventListener('click', closeMenuButtonClickHandler);
+  document.removeEventListener('keydown', escapeKeyDownHandler);
+  openMenuButton.addEventListener('click', openMenuButtonClickHandler);
 };
 
-const closeMenuByEsc = (evt) => {
-  const [feedbackModal, callModal] = document.querySelectorAll('.main__modal');
+const escapeKeyDownHandler = (evt) => {
   if ((evt.key === 'Escape') && !(feedbackModal.classList.contains('main__modal--open') || callModal.classList.contains('main__modal--open'))) {
     closeMenu();
   }
 };
 
-openMenuButton.addEventListener('click', () => {
+const overlayMenuClickHandler = () => {
+  closeMenu();
+}
+
+const closeMenuButtonClickHandler = () => {
+  closeMenu();
+}
+
+const openMenuButtonClickHandler = () => {
   openMenu();
-  overlayMenu.addEventListener('click', closeMenu);
-  closeMenuButton.addEventListener('click', closeMenu);
-  document.addEventListener('keydown', closeMenuByEsc);
-});
+}
+
+openMenuButton.addEventListener('click', openMenuButtonClickHandler);
